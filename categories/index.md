@@ -1,5 +1,6 @@
 ---
-title: Categories
+title: 分类目录
+pagetitle: 读万卷书,行万里路
 layout: page
 ---
 

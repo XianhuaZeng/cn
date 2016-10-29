@@ -1,5 +1,5 @@
 ---
-title: Keep on Fighting!
+title: 分享学习和生活中的点滴
 layout: page
 ---
 
@@ -16,4 +16,3 @@ layout: page
   </li>
 {% endfor %}
 </ul>
-
