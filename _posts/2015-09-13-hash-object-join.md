@@ -14,11 +14,11 @@ categories: [程序人生]
 </blockquote>
 <p>从这句话可以看出，将最大的数据集放到哈希表中更为高效，但是在实际应用中根据程序的目的还是需要做出选择，即选择左连接（A left join B）还是右连接（A right join B）。其实很简单，如果数据集不是很大的时候可以这样处理：如果是左连接那么就把数据集B放到哈希表中；如果是右连接就把数据集A放到哈希表中；如果是内接连（A inner join B）那么就把大的放到哈希表中。对于前两种连接如果不按上述处理，那么就需要多写几行额外的代码来修改哈希表里的内容。</p>
 <p>      另外，我们还会碰到多个数据集用哈希表进行合并的情况，如果KEY是同一个变量，那么任意放N-1个数据集放到哈希表中，直接用以下语句即可实现：</p>
-<pre lang="SAS">if h1.find()=0 and h2.find()=0 and ... and hn.find()=0;
-</pre>
+<pre><code>if h1.find()=0 and h2.find()=0 and ... and hn.find()=0;
+</code></pre>
 <p>如果KEY是不是同一个变量，那么就要单独指定KEY，语句如下：</p>
-<pre lang="SAS">rc=h1.find();
+<pre><code>rc=h1.find();
 rc=h2.find(key: VAR);
 ...
 rc=hn.find(key: VAR_N);
-</pre>
+</code></pre>

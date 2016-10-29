@@ -17,8 +17,8 @@ categories: [程序人生]
 <p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/05/Position.jpg"><img class="aligncenter size-full wp-image-182" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/05/Position.jpg" alt="Position" width="418" height="869" /></a></p>
 <p>      比如我们要为柱状图添加95%可信区间（见下图），则参数POSITION='B'。</p>
 <p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/05/Histogram.jpg"><img class="aligncenter size-full wp-image-268" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/05/Histogram.jpg" alt="Histogram" width="163" height="209" /></a></p>
-<pre lang="SAS">%label(TRTN, UPPERCL, "_", black, 0, 0, 1, simplex, B);
-</pre>
+<pre><code>%label(TRTN, UPPERCL, "_", black, 0, 0, 1, simplex, B);
+</code></pre>
 <ul style="list-style-type: disc;">
 	<li>%SYSTEM(xsys, ysys, hsys); --&gt; 通过设定xsys, ysys和hsys（仅限3D图）的值来指定操作在画布中的位置变量 </li>
 </ul>
@@ -26,8 +26,8 @@ categories: [程序人生]
 <p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/05/System.jpg"><img class="aligncenter size-full wp-image-181" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/05/System.jpg" alt="System" width="611" height="449" /></a></p>
 <p>      比如要用坐标轴的值来确定Data Area中的位置就可以用 %system(2, 2)，而要用X轴的值加画布的百分比值来确定Graphics Output Area中的位置就可以用%system(2, 3)。</p>
 <p>以上宏的详细信息大家可以调用下面这个宏来查询：</p>
-<pre lang="SAS">%HELPANO(ALL)
-</pre>
+<pre><code>%HELPANO(ALL)
+</code></pre>
 <p>      使用Annotate Facility具体步骤如下：</p>
 <ol>
 	<li>调用宏%annomac，编译相关的宏以便后续直接调用；</li>

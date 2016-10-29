@@ -11,7 +11,7 @@ categories: [程序人生]
  可惜没有分享源程序，所以我写了两个小程序，实现了自动打开数据集及复制变量值。</p>
 <ol>
 	<li>自动打开所选中的数据集。当我们想打开一个很长程序中间过程的一个数据集时，一般的操作是资源管理器 - 逻辑库，然后找到目标数据集双击打开。有了下面这个宏，我们只要在程序编辑器选中目标数据集，然后按快捷键就可以自动打开。
-<pre lang="SAS">%macro markdsn();
+<pre><code>%macro markdsn();
 gsubmit "
 dm 'wcopy';
 
@@ -24,10 +24,10 @@ data _null_;
 run;
 
 filename clip clear;";
-%mend markdsn;</pre>
+%mend markdsn;</code></pre>
 </li>
 	<li>自动复制选中变量的值。当我们要在一个数据集中筛选出某一变量取特定值时的记录时，比如要筛选某一个AETERM，一般的操作是打开数据集或者从他处手动复制这个AETERM，然后粘贴到程序编辑器选中对应的语句中。有了下面这个宏，我们只要在程序编辑器选中目标变量，然后按快捷键就可以自动将目标变量的值复制到剪贴板，每按一次得到目标变量的一个值，直到得到想要的变量值，再粘贴到程序编辑器选中对应的语句中。
-<pre lang="SAS">%macro vvalue();
+<pre><code>%macro vvalue();
 gsubmit '
 dm "wcopy";
 
@@ -60,7 +60,7 @@ data _null_;
 run;
 
 filename clip clear;';
-%mend vvalue;</pre>
+%mend vvalue;</code></pre>
 </li>
 </ol>
 <p>      接下来说下设置和用法。设置如下：</p>
@@ -68,8 +68,8 @@ filename clip clear;';
 	<li>将这些宏放到某一自动编译宏的逻辑库，即sasautos值对应的路径</li>
 	<li>在初始化程序中设置一个名为INCREMENT，初始值为0的全局宏变量</li>
 	<li>在命令行输入以下命令为宏设置对应的快捷键以便调用宏
-<pre lang="sas" line="" file="" colla="+">keydef 'F9' '%makedsn'
-keydef 'F10' '%vvalue'</pre>
+<pre><code>keydef 'F9' '%makedsn'
+keydef 'F10' '%vvalue'</code></pre>
 </li>
 </ol>
 <p>      用法如下：</p>

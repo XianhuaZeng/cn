@@ -11,7 +11,7 @@ categories: [程序人生]
 <ol>
 	<li>不用PROC TRANSPOSE，代码如下：
 
-<pre lang="SAS">data want;
+<pre><code>data want;
     array VARL[6] DATE1 RES1 DATE2 RES2 DATE3 RES3;
     NUM=1;
     do until(last.NAME);
@@ -22,11 +22,11 @@ categories: [程序人生]
         NUM=NUM+2;
     end;
     drop NUM DATE RES;
-run;</pre>
+run;</code></pre>
 </li>
 	<li>只用一次PROC TRANSPOSE，代码如下：
 
-<pre lang="SAS">data temp;
+<pre><code>data temp;
     set ex1;
     array varlist DATE RES;
     do I=1 to dim(varlist);
@@ -39,6 +39,6 @@ proc transpose data=temp out=want;
     by NAME;
     var VAR1;
 run;
-</pre>
+</code></pre>
 </li>
 </ol>

@@ -12,18 +12,18 @@ categories: [程序人生]
 <p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/05/Format.jpg"><img class="aligncenter size-full wp-image-136" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/05/Format.jpg" alt="Format" width="506" height="483" /></a></p>
 <ol>
 	<li>通过<a href="http://support.sas.com/documentation/cdl/en/mcrolref/67912/HTML/default/viewer.htm#n1q1527d51eivsn1ob5hnz0yd1hx.htm" target="_blank"><span style="text-decoration: underline;">CALL EXECUTE</span></a>创建。
-<pre lang="SAS">/*方法1: CALL EXECUTE*/
+<pre><code>/*方法1: CALL EXECUTE*/
 data _null_;
     set demo end=eof;
     if _n_=1 then call execute('proc format; value vs1t');
     call execute(cats(AVISITN)||' = '||quote(cats(AVISIT)));
     if eof then call execute('; run;');
 run;
-</pre>
+</code></pre>
 </li>
 	<li>通过宏变量创建。
 
-<pre lang="SAS">/*方法2: macro variable*/
+<pre><code>/*方法2: macro variable*/
 proc sql noprint;
     select catx(' = ', cats(AVISITN), quote(cats(AVISIT))) into :fmtlst separated by ' '
         from demo
@@ -34,11 +34,11 @@ proc format;
     value vs2t
     &amp;fmtlst;
 run;
-</pre>
+</code></pre>
 </li>
 	<li>通过<a href="http://support.sas.com/documentation/cdl/en/proc/65145/HTML/default/viewer.htm#n1e19y6lrektafn1kj6nbvhus59w.htm" target="_blank"><span style="text-decoration: underline;">CNTLIN=</span></a>选项创建。
 
-<pre lang="SAS">/*方法3: CNTLIN= option*/
+<pre><code>/*方法3: CNTLIN= option*/
 proc sql;
     create table fmt as
         select distinct 'vs3t' as FMTNAME
@@ -51,11 +51,11 @@ quit;
 
 proc format library=work cntlin=fmt;
 run;
-</pre>
+</code></pre>
 </li>
 	<li>通过<a href="https://support.sas.com/documentation/cdl/en/lestmtsref/63323/HTML/default/p05r9vhhqbhfzun1qo9mw64s4700.htm" target="_blank"><span style="text-decoration: underline;">FILENAME</span></a>创建。
 
-<pre lang="SAS">/*方法4: FILENAME*/
+<pre><code>/*方法4: FILENAME*/
 proc sql;
     create table fmt as
         select distinct AVISITN
@@ -78,6 +78,6 @@ proc format;
     %inc code / source2;
     ;
 run;
-</pre>
+</code></pre>
 </li>
 </ol>

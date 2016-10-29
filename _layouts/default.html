@@ -7,7 +7,8 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <link href="{{ site.url }}/feed/" rel="alternate" title="{{ site.author }}" type="application/atom+xml" />
     <link rel="stylesheet" href="/media/css/style.css">
-    <link rel="stylesheet" href="/media/js/code/prettify.css">
+    <link rel="stylesheet" href="/media/css/highlight.css">
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
   </head>
   <body>
     <div id="container">
@@ -30,22 +31,6 @@
         </article>
       </div>
     </div>
-
-    <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="/media/js/code/prettify.js"></script>
-
-    <script type="text/javascript">
-      $(function(){
-        $("pre").addClass("prettyprint linenums");
-        prettyPrint();
-        $('.entry a').each(function(){
-          if($(this).attr("href").indexOf("xianhuazeng") == -1){
-            $(this).attr("target", "_blank");
-          }
-        })
-      });
-    </script>
-
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-65950412-2']);

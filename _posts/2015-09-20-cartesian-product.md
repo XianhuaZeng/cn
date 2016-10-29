@@ -15,27 +15,27 @@ categories: [程序人生]
 <ol>
 <ol>
 	<li><span style="text-decoration: underline;"><a href="http://support.sas.com/documentation/cdl/en/sqlproc/63043/HTML/default/viewer.htm#titlepage.htm" target="_blank">PROC SQL</a></span>：
-<pre lang="SAS">proc sql;
+<pre><code>proc sql;
     create table want as
         select a.*, b.*
         from demo1 a, demo2 b
         where A &lt;= ID &lt;= B
         ;
 quit;
-</pre>
+</code></pre>
 </li>
 	<li>DATA步：
-<pre lang="SAS">data want;
+<pre><code>data want;
     set demo1;
     do i=1 to n;
         set demo2 point=i nobs=n;
         if A &lt;= ID &lt;= B then output;
     end;
 run;
-</pre>
+</code></pre>
 </li>
 	<li><a href="http://support.sas.com/documentation/cdl/en/lrcon/65287/HTML/default/viewer.htm#n1b4cbtmb049xtn1vh9x4waiioz4.htm" target="_blank"><span style="text-decoration: underline;">HASH</span></a>：
-<pre lang="SAS">data want;
+<pre><code>data want;
     if _n_=1 then do;
         if 0 then set demo2;
         dcl hash h(dataset:'demo2');
@@ -49,7 +49,7 @@ run;
         if A &lt;= ID &lt;= B then output;
     end;
 run;
-</pre>
+</code></pre>
 </li>
 </ol>
 </ol>

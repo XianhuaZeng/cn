@@ -12,7 +12,7 @@ categories: [程序人生]
 <p><!--more--></p>
 <p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/05/0A0D.jpg" rel="fancybox"><img class="aligncenter size-full wp-image-154" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/05/0A0D.jpg" alt="0A0D" width="607" height="44" /></a></p>
 <p>      接着看了下她的程序：</p>
-<pre lang="SAS">data _null_;
+<pre><code>data _null_;
     set xmlall end=done;
     file xmlout;
     put LINE;
@@ -27,10 +27,10 @@ categories: [程序人生]
         LINE = '';                                                                                               	    put LINE;
     end;
 run;
-</pre>
+</code></pre>
 <p>      发现以上程序没有问题，一开始我也觉得奇怪，仔细想了下，发现原来是PUT语句搞的鬼，原来PUT语句一行最多可以写255个字符串，所以对于长度超过255的行会自动PUT成多行，这样就会导致最后的Define.xml有回车和换行符了。</p>
 <p>      对于这个问题，又要用到强大的正则表达式了，即将变量LINE每隔固定的长度（这里取200）插入一个分隔符，然后生成多行，这样再PUT就不会出问题了。代码如下：</p>
-<pre lang="SAS">data xmlall;
+<pre><code>data xmlall;
     set xmlall;
     LINE=prxchange("s/(.{1,200})([\s]|$)/\1@/", -1, cats(LINE));
     LINE=prxchange('s/(.+)\@/\1/', -1, LINE);
@@ -43,4 +43,4 @@ run;
     drop LINE;
     rename LINE_=LINE;
 run;
-</pre>
+</code></pre>

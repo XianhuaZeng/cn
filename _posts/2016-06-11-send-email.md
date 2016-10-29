@@ -12,7 +12,7 @@ categories: [程序人生]
 <ol>
 	<li><span style="text-decoration: underline;"><a href="http://support.sas.com/documentation/cdl/en/lestmtsref/63323/HTML/default/viewer.htm#n0ig2krarrz6vtn1aw9zzvtez4qo.htm" target="_blank">FILENAME_+ EMAIL</a></span>，这个语句可以实现有FORMAT的内容在邮件正文中。比如上图中定义的颜色。程序如下：
 
-<pre lang="SAS">filename sende email to='huazizeng@gmail.com' subject='Demo';
+<pre><code>filename sende email to='huazizeng@gmail.com' subject='Demo';
 
 ods listing close;
 ods html body=sende;
@@ -28,11 +28,11 @@ proc report data=summary nowd missing spacing=0 split="@" contents="";
 run;
 
 ods html close;
-ods listing;</pre>
+ods listing;</code></pre>
 
 上面是不需要设置邮件信息的，设置的程序如下：
 
-<pre lang="SAS">options emailsys='smtp' emailauthprotocol='login' emailhost='smtp.163.com' emailid='uemailid@163.com' emailpw='XXXXXXXX';
+<pre><code>options emailsys='smtp' emailauthprotocol='login' emailhost='smtp.163.com' emailid='uemailid@163.com' emailpw='XXXXXXXX';
 
 filename sende email to='huazizeng@gmail.com' subject='Demo';
 
@@ -40,16 +40,16 @@ data _null_;
     file sende;
     put 'Hello world!';
 run;
-</pre>
+</code></pre>
 </li>
 	<li><a href="https://en.wikipedia.org/wiki/Mailx" target="_blank"><span style="text-decoration: underline;">MAILX</span></a>，程序如下：
 
-<pre lang="SAS">/*正文*/
+<pre><code>/*正文*/
 x 'cat test.txt | mailx -m -s "subject" huazizeng@gmail.com';
 /*附件*/
 x 'uuencode test.txt attach.txt | mailx -m -s "subject" huazizeng@gmail.com';
 /*正文 + 附件*/
-x '(cat test.txt; uuencode test.txt attach.txt) | mailx -m -s "subject" huazizeng@gmail.com';</pre>
+x '(cat test.txt; uuencode test.txt attach.txt) | mailx -m -s "subject" huazizeng@gmail.com';</code></pre>
 </li>
 </ol>
 <p>      需要注意的是，第二种方法中的文本如果有格式（比如有对齐的格式），那么在邮件正文中的格式可能会不正确，对于这种情况建议用第一种方法。</p>

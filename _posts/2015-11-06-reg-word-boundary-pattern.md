@@ -11,36 +11,36 @@ categories: [程序人生]
 <p>      设有宏变量varlst的值为”LBCAT|LBSTAT|LBTEST|LBTESTCD“，字符串VAR_HAVE="LBSTAT=NOT DONE when LBTESTCD=LBALL and LBCAT=HEMATOLOGY"，想要实现的是将字符串VAR_HAVE中非宏变量中的单词删除掉，即只保留宏变量中出现的单词。分情况讨论：</p>
 <ol>
 	<li>当程序为：
-<pre lang="SAS">%let varlst=LBCAT|LBSTAT|LBTEST|LBTESTCD;
+<pre><code>%let varlst=LBCAT|LBSTAT|LBTEST|LBTESTCD;
 data test;
     VAR_HAVE='LBSTAT=NOT DONE when LBTESTCD=LBALL and LBCAT=HEMATOLOGY';
     VAR_WANT=compbl(prxchange("s/.*?(&amp;varLst.)?/$1 /", -1, cats(VAR_HAVE)));
     PUT VAR_WANT=;
 run;
-</pre>
+</code></pre>
 <p>VAR_WANT="LBSTAT LBTEST LBCAT"，解释：因为SAS中正则表达式引擎为<span style="text-decoration: underline;"><a href="https://en.wikipedia.org/wiki/Nondeterministic_finite_automaton" target="_blank">非确定性有穷自动机</a></span>（NFA: Non-Deterministic Finite Automaton），表达式从左往右匹配，当匹配到“LBTEST”时因为没有使用“\b”即成功，不再尝试后面那个子正则式"/LBTESTCD/"，接着往下继续匹配。</p>
 </li>
 	<li>当程序为：
-<pre lang="SAS">%let varlst=LBCAT|LBSTAT|LBTEST|LBTESTCD;
+<pre><code>%let varlst=LBCAT|LBSTAT|LBTEST|LBTESTCD;
 data test;
     VAR_HAVE='LBSTAT=NOT DONE when LBTESTCD=LBALL and LBCAT=HEMATOLOGY';
     VAR_WANT=compbl(prxchange("s/.*?(\b&amp;varLst.\b)?/$1 /", -1, cats(VAR_HAVE)));
     PUT VAR_WANT=;
 run;
-</pre>
+</code></pre>
 <p>VAR_WANT="LBSTAT LBTEST LBCAT"，解释：虽然用了“\b”，宏变量解析后表达式中的括号内为： "\bLBCAT|LBSTAT|LBTEST|LBTESTCD\b"，因为是NFA，当匹配到“LBTEST”时即成功，不再尝试后面那个子正则式"/LBTESTCD\b/"，接着往下继续匹配。所以为了精确匹配"LBTESTCD"，需要在每个单词后面加上“\b”，即下面的程序：</p>
 </li>
 	<li>当程序为：
-<pre lang="SAS">%let varlst=LBCAT|LBSTAT|LBTEST|LBTESTCD;
+<pre><code>%let varlst=LBCAT|LBSTAT|LBTEST|LBTESTCD;
 data test;
     VAR_HAVE='LBSTAT=NOT DONE when LBTESTCD=LBALL and LBCAT=HEMATOLOGY';
     VAR_WANT=compbl(prxchange("s/.*?(\b(&amp;varLst.)\b)?/$1 /", -1, cats(VAR_HAVE)));
     PUT VAR_WANT=;
 run;
-</pre>
+</code></pre>
 <p>VAR_WANT="LBSTAT LBTESTCD LBCAT"，解释：宏变量解析后表达式中的括号内等同于： "\bLBCAT\b|\bLBSTAT\b|\bLBTEST\b|\bLBTESTCD\b"，但是表达式是从左往右匹配，当匹配到“LBTEST”时不成功，因为后面有字母"CD"，故与"\bLBTEST\b"不匹配，接着往后继续匹配。当匹配到“LBTESTCD”时成功，因为后面的等号"="，满足单词边界的要求，故与"\bLBTESTCD\b"匹配。当然，为了提高效率可以加上非捕获匹配符(?:)，表达式如下：</p>
-<pre lang="SAS">pattern="/.*?(\b(?:&amp;varLst.)\b)?/";
-</pre>
+<pre><code>pattern="/.*?(\b(?:&amp;varLst.)\b)?/";
+</code></pre>
 </li>
 </ol>
 <p>      说到正则表达式引擎，还有一种称为<span style="text-decoration: underline;"><a href="https://en.wikipedia.org/wiki/Deterministic_finite_automaton" target="_blank">确定性有穷自动机</a></span>（DFA: Deterministic Finite Automaton）。NFA与DFA最大的区别在于：NFA是最左子正则式优先匹配成功，因此偶尔可能会错过最佳匹配结果；DFA则是最长的左子正则式优先匹配成功。最后推荐一个可视化正则表达式NFA/DFA的<span style="text-decoration: underline;"><a href="http://hackingoff.com/compilers/regular-expression-to-nfa-dfa" target="_blank">小神器</a></span>。上面表达式的可视化结果如下：</p>

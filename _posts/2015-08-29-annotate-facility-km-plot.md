@@ -14,7 +14,7 @@ categories: [程序人生]
 <p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/08/KM-Plot-2.jpg"><img class="aligncenter size-full wp-image-392" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/08/KM-Plot-2.jpg" alt="KM Plot 2" width="864" height="377" /></a></p>
 <p>      从上图可以看出，当X轴没有设置OFFSET时，第一个刻度和原点重合了；当Y轴没有设置OFFSET时，第一个刻度和原点重合了，最后一个刻度与整个图形的框架的顶部线条重合了，这也就导致了曲线开始一段和整个图形的框架的顶部线条重合了，这样的图不就美观了。</p>
 <p>      理解了ORIGIN和OFFSET用法之后，我们就要开始做Annotation的数据集了。首先是通过宏%LABEL将字符串‘NUMBER OF SUBJECTS AT RISK’、'TRT A'、'TRT B'写到图片上；接着通过宏%LABEL将‘NUMBER OF SUBJECTS AT RISK’对应的具体数字写到图片上；最后是用宏%LINE画X轴的刻度。因为图中X轴的刻度显示是不连续的，故无法使用AXIS语句中MAJOR选项。生成上述三个数据集的程序如下：</p>
-<pre lang="SAS">/*字体*/
+<pre><code>/*字体*/
 %let ftext ='Albany AMT/roman/medium';
 
 /*编译宏*/
@@ -54,9 +54,9 @@ run;
 data anno;
     set anno1 anno2 anno3;
 run;
-</pre>
+</code></pre>
 <p>      接下来就是设置坐标和图例的属性了，程序如下：</p>
-<pre lang="SAS">/*曲线属性*/
+<pre><code>/*曲线属性*/
 symbol1 c=black l=1 w=1 v=none i=steplj;
 symbol2 c=blue l=3 w=1 v=none i=steplj;
 
@@ -87,9 +87,9 @@ run ;
 quit;
 
 ods rtf close;
-</pre>
+</code></pre>
 <p>      到这里整个图形就算画好了，当然有的时候我们还会碰到要用特殊的符号来显示删失（Censored）的情况，比如用小长方形，那我们就可以用以下的程序来实现：</p>
-<pre lang="SAS">data anno;
+<pre><code>data anno;
     set productlimitestimates(where=(CENSOR=1));
     %system(2, 2);
     if TRT=1 then do;
@@ -101,5 +101,5 @@ ods rtf close;
         %BAR2(TIME-0.03, SURVIVAL-0.5, TIME+0.03, SURVIVAL+0.5, black, 0, e, 0.5);
     end;
 run;
-</pre>
+</code></pre>
 <p>      结果如下：<a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/08/KM-Plot-3.jpg"><img class="aligncenter size-full wp-image-401" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/08/KM-Plot-3.jpg" alt="KM Plot 3" width="864" height="377" /></a></p>

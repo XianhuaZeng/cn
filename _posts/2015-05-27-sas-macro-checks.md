@@ -13,7 +13,7 @@ categories: [程序人生]
 <ol>
 	<li> 判断某个变量是否在
 
-<pre lang="SAS">%macro VarExist(ds,var);
+<pre><code>%macro VarExist(ds,var);
     %local rc dsid result;
     %let dsid=%sysfunc(open(&amp;ds));
     %if %sysfunc(varnum(&amp;dsid, &amp;var)) &gt; 0 %then %do;
@@ -27,27 +27,27 @@ categories: [程序人生]
     %let rc=%sysfunc(close(&amp;dsid));
     &amp;result
 %mend VarExist;
-</pre>
+</code></pre>
 </li>
 	<li>判断一个路径是否存在
 
-<pre lang="SAS">%macro DirExist(dir) ; 
+<pre><code>%macro DirExist(dir) ; 
    %local rc fileref return; 
    %let rc = %sysfunc(filename(fileref, &amp;dir)) ; 
    %if %sysfunc(fexist(&amp;fileref))  %then %let return=1;    
    %else %let return=0;
    &amp;return
 %mend DirExist;
-</pre>
+</code></pre>
 
 当然，如果是UNIX SAS我们还可以直接用函数<span style="text-decoration: underline;"><a href="http://support.sas.com/documentation/cdl/en/hostunx/61879/HTML/default/viewer.htm#a000351867.htm" target="_blank">FILEEXIS</a></span>T来判断。程序如下：
 
-<pre lang="SAS">%if %sysfunc(fileexist(%nrbquote(&amp;dir))) %then ...;
-</pre>
+<pre><code>%if %sysfunc(fileexist(%nrbquote(&amp;dir))) %then ...;
+</code></pre>
 </li>
 	<li>判断一个路径下面某种文件(txt)是否存在的Code如下：
 
-<pre lang="SAS">%let fexist=1;
+<pre><code>%let fexist=1;
 
 filename fexist pipe "ls &amp;dir.*.txt";
 
@@ -58,6 +58,6 @@ data _null_;
 run;
 
 filename fexist clear;
-</pre>
+</code></pre>
 </li>
 </ol>
