@@ -16,5 +16,5 @@ data _null_;
 run;
 
 filename filelst clear;
-</code></pre><p>简单介绍一下上面的UNIX命令：其中的<code>s#.*/##</code>是用来去掉目录；<code>s#\..*$##</code>是用来去掉文件后缀；命令<span style="text-decoration: underline;"><code><a href="https://en.wikipedia.org/wiki/Paste_(Unix)" target="_blank">paste</a></code></span>，顾名思义就是将几个文件连接起来；选项<code>-s</code>的作用是将每个文件作为一个处理单元；选项<code>-d</code>的作用是用来设定间隔符。连接功能也可以用<span style="text-decoration: underline;"><code><a href="https://en.wikipedia.org/wiki/AWK" target="_blank">AWK</a></code></span>来实现，即：</p><pre lang="SAS">filename filelst pipe "ls ./*.txt | sed -e 's#.*/##; s#\..*$##' | awk 'ORS=""|""'";
-</pre><p>不过这个命令有一个小问题，就是在最后会多出一个间隔符，需要在后续的DATA步中处理一下。</p>
+</code></pre><p>简单介绍一下上面的UNIX命令：其中的<code>s#.*/##</code>是用来去掉目录；<code>s#\..*$##</code>是用来去掉文件后缀；命令<span style="text-decoration: underline;"><code><a href="https://en.wikipedia.org/wiki/Paste_(Unix)" target="_blank">paste</a></code></span>，顾名思义就是将几个文件连接起来；选项<code>-s</code>的作用是将每个文件作为一个处理单元；选项<code>-d</code>的作用是用来设定间隔符。连接功能也可以用<span style="text-decoration: underline;"><code><a href="https://en.wikipedia.org/wiki/AWK" target="_blank">AWK</a></code></span>来实现，即：</p><pre><code>filename filelst pipe "ls ./*.txt | sed -e 's#.*/##; s#\..*$##' | awk 'ORS=""|""'";
+</code></pre><p>不过这个命令有一个小问题，就是在最后会多出一个间隔符，需要在后续的DATA步中处理一下。</p>

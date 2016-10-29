@@ -22,9 +22,9 @@ categories: [程序人生]
         LINE = '<!-- ***************************************************************************************** -->'; put LINE;
         LINE = '<!-- Close the container elements -->';                                                              put LINE;
         LINE = '<!-- ***************************************************************************************** -->'; put LINE;
-        LINE = '';                                                                                               	    put LINE;
-        LINE = '';                                                                                               	    put LINE;
-        LINE = '';                                                                                               	    put LINE;
+        LINE = '';                                                                                                   put LINE;
+        LINE = '';                                                                                                   put LINE;
+        LINE = '';                                                                                                   put LINE;
     end;
 run;
 </code></pre>
