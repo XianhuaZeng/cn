@@ -1,6 +1,8 @@
 ---
-title: tags
+title: 标签
 layout: page
+comments: yes
+pagetitle: 标签
 ---
 
 <div id='tag_cloud'>
