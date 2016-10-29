@@ -44,4 +44,4 @@ data want;
     PINYIN=resolve(prxchange("s/(&amp;Hanzilst)/ &amp;\1./", -1, HANZI));
     PINYIN=prxchange('s/(，| |-|_)\s/\1/', -1, cats(PINYIN));                      
 run;
-</code></pre><p>      结果如下：</p><p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/07/Result.jpg"><img class="aligncenter size-full wp-image-287" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/07/Result.jpg" alt="Result" width="944" height="66" /></a>      这个方法的优点是简洁且不用考虑分隔符，缺点是暂时不能解决汉字多音字拼音的问题。此方法还可以巧妙地用在很多地方，比如这个<span style="text-decoration: underline;"><a href="http://bbs.pinggu.org/thread-2328507-1-1.html" target="_blank">帖子</a></span>。</p>
+</code></pre><p>      结果如下：</p><p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/07/Result.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/07/Result.jpg" alt="Result" /></a>      这个方法的优点是简洁且不用考虑分隔符，缺点是暂时不能解决汉字多音字拼音的问题。此方法还可以巧妙地用在很多地方，比如这个<span style="text-decoration: underline;"><a href="http://bbs.pinggu.org/thread-2328507-1-1.html" target="_blank">帖子</a></span>。</p>

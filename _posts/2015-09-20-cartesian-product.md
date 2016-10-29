@@ -8,10 +8,10 @@ tags: [Cartesian Product, Hash Object, PROC SQL, 笛卡尔积]
 categories: [程序人生]
 ---
 <p>      在平时写程序的时候，有时候我们在LOG中会看到类似下图的提示，而实际上<span style="text-decoration: underline;"><a href="https://zh.wikipedia.org/zh/%E7%AC%9B%E5%8D%A1%E5%84%BF%E7%A7%AF" target="_blank">笛卡尔积</a></span>可能又的确是我们所要的结果。下面介绍几种产生笛卡尔积的方法。</p>
-<p>><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/09/Cartesian1.jpg"><img class="aligncenter size-full wp-image-464" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/09/Cartesian1.jpg" alt="Cartesian1" width="986" height="40" /></a></p>
+<p>><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/09/Cartesian1.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/09/Cartesian1.jpg" alt="Cartesian1" /></a></p>
 <p><!--more--></p>
 <p>      设有两个数据集如下，假设我们要的结果是A &lt;= ID &lt;= C：</p>
-<p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/09/Cartesian2.jpg"><img class="aligncenter size-full wp-image-463" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/09/Cartesian2.jpg" alt="Cartesian2" width="969" height="253" /></a></p>
+<p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/09/Cartesian2.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/09/Cartesian2.jpg" alt="Cartesian2" /></a></p>
 <ol>
 <ol>
 	<li><span style="text-decoration: underline;"><a href="http://support.sas.com/documentation/cdl/en/sqlproc/63043/HTML/default/viewer.htm#titlepage.htm" target="_blank">PROC SQL</a></span>：

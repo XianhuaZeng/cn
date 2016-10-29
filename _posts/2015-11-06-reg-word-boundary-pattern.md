@@ -45,6 +45,6 @@ run;
 </ol>
 <p>      说到正则表达式引擎，还有一种称为<span style="text-decoration: underline;"><a href="https://en.wikipedia.org/wiki/Deterministic_finite_automaton" target="_blank">确定性有穷自动机</a></span>（DFA: Deterministic Finite Automaton）。NFA与DFA最大的区别在于：NFA是最左子正则式优先匹配成功，因此偶尔可能会错过最佳匹配结果；DFA则是最长的左子正则式优先匹配成功。最后推荐一个可视化正则表达式NFA/DFA的<span style="text-decoration: underline;"><a href="http://hackingoff.com/compilers/regular-expression-to-nfa-dfa" target="_blank">小神器</a></span>。上面表达式的可视化结果如下：</p>
 <p>      1.NFA</p>
-<p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/11/Reg2NFA.jpg"><img class="aligncenter size-full wp-image-580" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/11/Reg2NFA.jpg" alt="Reg2NFA" width="290" height="2178" /></a></p>
+<p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/11/Reg2NFA.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/11/Reg2NFA.jpg" alt="Reg2NFA" /></a></p>
 <p>      2. DFA</p>
-<p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/11/Reg2DFA.jpg"><img class="aligncenter size-full wp-image-581" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/11/Reg2DFA.jpg" alt="Reg2DFA" width="252" height="1072" /></a></p>
+<p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/11/Reg2DFA.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/11/Reg2DFA.jpg" alt="Reg2DFA" /></a></p>
