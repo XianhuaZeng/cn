@@ -1,10 +1,13 @@
 ---
 layout: post
 title: Annotate Facility之森林图
+date: 2015-10-02 01:25
+author: Xianhua.Zeng
+comments: true
 tags: [Annotate, Forest plot, PROC GPLOT, 森林图]
 categories: [程序人生]
 ---
-<p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/10/forest1.png"><img class="aligncenter size-full wp-image-521" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/10/forest1.png" alt="forest1" /></a></p><p>      森林图（<span style="text-decoration: underline;"><a href="https://en.wikipedia.org/wiki/Forest_plot" target="_blank">Forest plot</a></span>）是以统计指标和统计分析方法为基础，用数值运算结果绘制出的图型。它在平面直角坐标系中，以一条垂直的无效线(横坐标刻度为1或0)为中心，用平行于横轴的多条线段描述了每个被纳入研究的效应量和可信区间(confidence interval，CI)。森林图是<span style="text-decoration: underline;"><a href="http://baike.baidu.com/view/938263.htm" target="_blank">Meta分析</a></span>中最常用的结果表达形式，当然类似的结果也可以用森林图来展示，比如上图即展示了两处理组在各个亚组因素的反应率的差异的95%可信区间。</p><p>      假设统计分析的结果如下：</p><p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/10/forest2.png"><img class="aligncenter size-full wp-image-522" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/10/forest2.png" alt="forest2" /></a></p><p>在画图之前我们要构造一个变量，即图中的变量ORD2，以保证数据集中的记录在图中能按顺序来显示，如本例中可以通过以下程序来得到变量ORD2，其中的ORD1的值是根据分组因素顺序定义的：</p><pre lang="SAS">ORD2=36-_N_-(ORD1-1);
+<p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/10/forest1.jpg"><img class="aligncenter size-full wp-image-521" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/10/forest1.jpg" alt="forest1" width="720" height="604" /></a></p><p>      森林图（<span style="text-decoration: underline;"><a href="https://en.wikipedia.org/wiki/Forest_plot" target="_blank">Forest plot</a></span>）是以统计指标和统计分析方法为基础，用数值运算结果绘制出的图型。它在平面直角坐标系中，以一条垂直的无效线(横坐标刻度为1或0)为中心，用平行于横轴的多条线段描述了每个被纳入研究的效应量和可信区间(confidence interval，CI)。森林图是<span style="text-decoration: underline;"><a href="http://baike.baidu.com/view/938263.htm" target="_blank">Meta分析</a></span>中最常用的结果表达形式，当然类似的结果也可以用森林图来展示，比如上图即展示了两处理组在各个亚组因素的反应率的差异的95%可信区间。<!--more--></p><p>      假设统计分析的结果如下：</p><p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/10/forest2.jpg"><img class="aligncenter size-full wp-image-522" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/10/forest2.jpg" alt="forest2" width="1132" height="503" /></a></p><p>在画图之前我们要构造一个变量，即图中的变量ORD2，以保证数据集中的记录在图中能按顺序来显示，如本例中可以通过以下程序来得到变量ORD2，其中的ORD1的值是根据分组因素顺序定义的：</p><pre lang="SAS">ORD2=36-_N_-(ORD1-1);
 </pre><p>开始画图：</p><ol><li>画首尾部的字符串和X轴，因为首尾部要用到的是Graphics Output区域故要用 %system(3, 3)，而X轴用的是Data区域故要用 %system(2, 2)，代码如下：<pre lang="SAS">/*字体*/
 %let ftext ='Albany AMT/roman/medium';
 

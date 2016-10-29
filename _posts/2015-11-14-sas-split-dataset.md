@@ -1,10 +1,13 @@
 ---
 layout: post
 title: 根据变量值拆分SAS数据集
+date: 2015-11-14 16:02
+author: Xianhua.Zeng
+comments: true
 tags: [CALL EXECUTE, FILENAME, Hash Object]
 categories: [程序人生]
 ---
-<p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/11/Splitting.jpg"><img class="aligncenter size-full wp-image-606" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/11/Splitting.jpg" alt="Splitting" /></a></p><p>      前几天看到一个群友（QQ群：<span style="text-decoration: underline;"><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/09/QQ.png" target="_blank">144839730</a></span>）提的一个问题，根据数据集中的某一个变量的值将一人大数据集拆分为多个小数据集（见上图第15题），实现这一目的的方法有多种，最常见的方法应该是宏循环，下面以根据变量SEX来拆分数据集SASHELP.CLASS为例介绍其他几种方法：</p><ol><li><span style="text-decoration: underline;"><a href="http://support.sas.com/documentation/cdl/en/mcrolref/61885/HTML/default/viewer.htm#a000543697.htm" target="_blank">CALL EXECUTE</a></span>，程序如下：<pre lang="SAS">proc sql;
+<p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/11/Splitting.jpg"><img class="aligncenter size-full wp-image-606" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/11/Splitting.jpg" alt="Splitting" width="1000" height="750" /></a></p><p>      前几天看到一个群友（QQ群：<span style="text-decoration: underline;"><a href="http://www.xianhuazeng.com/cnwp-content/uploads/2015/09/QQ.png" target="_blank">144839730</a></span>）提的一个问题，根据数据集中的某一个变量的值将一人大数据集拆分为多个小数据集（见上图第15题），实现这一目的的方法有多种，最常见的方法应该是宏循环，下面以根据变量SEX来拆分数据集SASHELP.CLASS为例介绍其他几种方法：<!--more--></p><ol><li><span style="text-decoration: underline;"><a href="http://support.sas.com/documentation/cdl/en/mcrolref/61885/HTML/default/viewer.htm#a000543697.htm" target="_blank">CALL EXECUTE</a></span>，程序如下：<pre lang="SAS">proc sql;
     create table sex as
         select distinct SEX 
     	from sashelp.class

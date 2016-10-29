@@ -1,10 +1,13 @@
 ---
 layout: post
 title: 批量改变SAS数据集字符型变量的长度
+date: 2015-11-15 11:22
+author: Xianhua.Zeng
+comments: true
 tags: [CDISC, Column Resizing, DICTIONARY Tables, SASHELP Views]
-categories: [程序人生, CDISC]
+categories: [程序人生]
 ---
-<p>      临床试验的SAS程序猿都知道，<span style="text-decoration: underline;"><a href="http://www.fda.gov/downloads/ForIndustry/DataStandards/StudyDataStandards/UCM312964.pdf" target="_blank">FDA</a></span>对所提交的数据集的大小是有限定的，因为数据集过大在操作时会有点麻烦（比如打开会很慢），所以当我们生成最终的数据集时就要进行一个操作：按照字符型变量值的最大长度来重新定义变量的长度，以删除多余的空格从而减少数据集的大小。下面贴上我去年写的实现这一目的的宏程序：</p><pre lang="SAS">%macro relngth(slib=, mem=);
+<p>      临床试验的SAS程序猿/媛都知道，<span style="text-decoration: underline;"><a href="http://www.fda.gov/downloads/ForIndustry/DataStandards/StudyDataStandards/UCM312964.pdf" target="_blank">FDA</a></span>对所提交的数据集的大小是有限定的，因为数据集过大在操作时会有点麻烦（比如打开会很慢），所以当我们生成最终的数据集时就要进行一个操作：按照字符型变量值的最大长度来重新定义变量的长度，以删除多余的空格从而减少数据集的大小。下面贴上我去年写的实现这一目的的宏程序：<!--more--></p><pre lang="SAS">%macro relngth(slib=, mem=);
 proc sql noprint;
     select cats(n(NAME)) into :vnum
         from dictionary.columns

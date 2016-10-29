@@ -1,10 +1,13 @@
 ---
 layout: post
 title: SAS创建单级书签的PDF文件
+date: 2015-07-16 22:18
+author: Xianhua.Zeng
+comments: true
 tags: [PDF, PROC REPORT, 书签]
 categories: [程序人生]
 ---
-<p><a class="fancybox" href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/07/Bookmark1.png" rel="fancybox"><img class="aligncenter size-full wp-image-42" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/07/Bookmark1.png" alt="Bookmark1" /></a></p><p>      在用<span style="text-decoration: underline;"><a href="http://support.sas.com/documentation/cdl/en/odsug/61723/HTML/default/a002231506.htm" target="_blank">ODS PDF</a></span>生成PDF文件时，为了美观有时只要一层书签（如上图），下图为多层级书签。</p><p><a class="fancybox" href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/07/Bookmark2.png" rel="fancybox"><img class="aligncenter size-full wp-image-42" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/07/Bookmark2.png" alt="Bookmark2" /></a><br />       实现方法在SAS知识库中已经有了（<span style="text-decoration: underline;"><a href="http://support.sas.com/kb/31/278.html" target="_blank">传送门</a></span>），代码（SAS 9.2 for Windows）搬运如下：</p><pre lang="SAS">data test; 
+<p><a class="fancybox" href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/07/Bookmark1.jpg" rel="fancybox"><img class="aligncenter size-full wp-image-42" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/07/Bookmark1.jpg" alt="Bookmark1" /></a></p><p>      在用<span style="text-decoration: underline;"><a href="http://support.sas.com/documentation/cdl/en/odsug/61723/HTML/default/a002231506.htm" target="_blank">ODS PDF</a></span>生成PDF文件时，为了美观有时只要一层书签（如上图），下图为多层级书签。<!--more--></p><p><a class="fancybox" href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/07/Bookmark2.jpg" rel="fancybox"><img class="aligncenter size-full wp-image-42" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/07/Bookmark2.jpg" alt="Bookmark2" /></a><br />       实现方法在SAS知识库中已经有了（<span style="text-decoration: underline;"><a href="http://support.sas.com/kb/31/278.html" target="_blank">传送门</a></span>），代码（SAS 9.2 for Windows）搬运如下：</p><pre lang="SAS">data test; 
     set sashelp.class; 
     count=1; 
 run; 
