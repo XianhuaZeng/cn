@@ -52,4 +52,4 @@ x 'uuencode test.txt attach.txt | mailx -m -s "subject" huazizeng@gmail.com';
 x '(cat test.txt; uuencode test.txt attach.txt) | mailx -m -s "subject" huazizeng@gmail.com';</code></pre>
 </li>
 </ol>
-<p>      需要注意的是，第二种方法中的文本如果有格式（比如有对齐的格式），那么在邮件正文中的格式可能会不正确，对于这种情况建议用第一种方法。</p>
+<p>需要注意的是，第二种方法中的文本如果有格式（比如有对齐的格式），那么在邮件正文中的格式可能会不正确，对于这种情况建议用第一种方法。</p>
