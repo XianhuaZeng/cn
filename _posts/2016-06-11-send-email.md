@@ -8,7 +8,7 @@ tags: [Email, FILENAME, 发邮件]
 categories: [程序人生]
 ---
 <p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2016/06/Email.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2016/06/Email.jpg" alt="Email" /></a></p>
-<p>SAS程序猿/媛在工作中可能会碰到需要用SAS来发送邮件通知的问题，如将一个宏程序执行信息或者某个程序生成的结果发送给指定用户。如上图，就是一个宏执行完毕后发送的一个邮件通知，内容包括宏程序是否正确执行完毕、生成结果的路径以及结果的一个简单的概括。下面记录下我用到的两种SAS发送邮件方法：<!--more--></p>
+<p>SAS程序猿/媛在工作中可能会碰到需要用SAS来发送邮件通知的问题，如将一个宏程序执行信息或者某个程序生成的结果发送给指定用户。如上图，就是一个宏执行完毕后发送的一个邮件通知，内容包括宏程序是否正确执行完毕、生成结果的路径以及结果的一个简单的概括。下面记录下我用到的两种SAS发送邮件方法：</p>
 <ol>
 	<li><span style="text-decoration: underline;"><a href="http://support.sas.com/documentation/cdl/en/lestmtsref/63323/HTML/default/viewer.htm#n0ig2krarrz6vtn1aw9zzvtez4qo.htm" target="_blank">FILENAME_+ EMAIL</a></span>，这个语句可以实现有FORMAT的内容在邮件正文中。比如上图中定义的颜色。程序如下：
 

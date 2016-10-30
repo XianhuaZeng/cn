@@ -9,7 +9,7 @@ categories: [程序人生]
 ---
 <p>当我们拿到的原始数据为.xpt格式时，就需要批量转换成.sas7bdat文件以便后续处理，而当我们要准备SDTM Package时，我们又要将.sas7bdat文件批量转换成.xpt文件。</p>
 <ol>
-	<li>xpt2sas.sas<!--more-->
+	<li>xpt2sas.sas
 <pre><code>/*SAS文件路径*/
 libname sdata "/home/users/zenga/code/sas/";
 

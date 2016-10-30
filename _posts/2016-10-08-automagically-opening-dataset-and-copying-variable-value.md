@@ -7,7 +7,7 @@ comments: true
 tags: [DM, GSUBMIT, PharmaSUG, PharmaSUG China 2016]
 categories: [程序人生]
 ---
-<p>上个月的今天，我从南到北，从深圳奔赴帝都参加了一个<span style="text-decoration: underline;"><a href="http://www.pharmasug.org/" target="_blank">制药行业SAS用户组会议</a></span>。听了两天的报告，收获不少。有幸见到SAS绘图大神<a href="https://support.sas.com/publishing/authors/matange.html" target="_blank"><span style="text-decoration: underline;">Sanjay Matange</span></a>，可惜当时忘记了要合影。这个名字可能大家不熟悉，但是他的博客<a href="http://blogs.sas.com/content/graphicallyspeaking/" target="_blank"><span style="text-decoration: underline;">Graphically Speaking</span></a>我相信很多人有看过。在众多报告中，印象最深的是一个大神的报告（How to give SAS ambiguous instructions and still being a big winner (literally delegate everything to SAS) -- Hui Liu, Eli Lilly）。<!--more-->他分享了几个很有用的SAS技巧，比如自动打开所标记的数据集、自动获取某个变量的值。<br />
+<p>上个月的今天，我从南到北，从深圳奔赴帝都参加了一个<span style="text-decoration: underline;"><a href="http://www.pharmasug.org/" target="_blank">制药行业SAS用户组会议</a></span>。听了两天的报告，收获不少。有幸见到SAS绘图大神<a href="https://support.sas.com/publishing/authors/matange.html" target="_blank"><span style="text-decoration: underline;">Sanjay Matange</span></a>，可惜当时忘记了要合影。这个名字可能大家不熟悉，但是他的博客<a href="http://blogs.sas.com/content/graphicallyspeaking/" target="_blank"><span style="text-decoration: underline;">Graphically Speaking</span></a>我相信很多人有看过。在众多报告中，印象最深的是一个大神的报告（How to give SAS ambiguous instructions and still being a big winner (literally delegate everything to SAS) -- Hui Liu, Eli Lilly）。他分享了几个很有用的SAS技巧，比如自动打开所标记的数据集、自动获取某个变量的值。<br />
  可惜没有分享源程序，所以我写了两个小程序，实现了自动打开数据集及复制变量值。</p>
 <ol>
 	<li>自动打开所选中的数据集。当我们想打开一个很长程序中间过程的一个数据集时，一般的操作是资源管理器 - 逻辑库，然后找到目标数据集双击打开。有了下面这个宏，我们只要在程序编辑器选中目标数据集，然后按快捷键就可以自动打开。

@@ -7,7 +7,7 @@ comments: true
 tags: [FILENAME, PIPE, sed]
 categories: [程序人生]
 ---
-<p>上篇<a href="http://www.xianhuazeng.com/cn?p=710" target="_blank"><span style="text-decoration: underline;">博文</span></a>有介绍SAS中用<span style="text-decoration: underline;"><a href="http://support.sas.com/documentation/cdl/en/hostunx/61879/HTML/default/viewer.htm#pipe.htm" target="_blank">FILENAME</a></span>+PIPE方法获取某目录下所有指定类型的文件名称，今天介绍一下用FILENAME+PIPE来获取某一目录下某种类型文件的最后修改时间。比如要获取程序所在目录下SAS数据集的最后修改时间，代码如下：<!--more--></p>
+<p>上篇<a href="http://www.xianhuazeng.com/cn?p=710" target="_blank"><span style="text-decoration: underline;">博文</span></a>有介绍SAS中用<span style="text-decoration: underline;"><a href="http://support.sas.com/documentation/cdl/en/hostunx/61879/HTML/default/viewer.htm#pipe.htm" target="_blank">FILENAME</a></span>+PIPE方法获取某目录下所有指定类型的文件名称，今天介绍一下用FILENAME+PIPE来获取某一目录下某种类型文件的最后修改时间。比如要获取程序所在目录下SAS数据集的最后修改时间，代码如下：</p>
 <pre><code>filename fdate pipe "ls -t ./*.sas7bdat | head -1";
 
 data _null_;

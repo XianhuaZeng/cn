@@ -9,7 +9,6 @@ categories: [程序人生]
 ---
 <p>我们在写相对复杂的宏的时候，通常会在开始位置加一些判断，比如判断某个变量是否在、一个路径是否存在、一个路径下面某种文件是否存在。。。</p>
 <p>前面两个在<span style="text-decoration: underline;"><a href="http://www.sascommunity.org/" target="_blank">sascommunity</a></span>中已经有了，链接分别为<span style="text-decoration: underline;"><a href="http://www.sascommunity.org/wiki/Tips:Check_if_a_variable_exists_in_a_dataset" target="_blank">变量</a></span>、<span style="text-decoration: underline;"><a href="http://www.sascommunity.org/wiki/Tips:Check_if_a_directory_exists" target="_blank">路径</a></span>。搬运如下：</p>
-<p><!--more--></p>
 <ol>
 	<li> 判断某个变量是否在
 

@@ -7,7 +7,7 @@ comments: true
 tags: [PRXCHANGE, Regular Expression, 正则表达式]
 categories: [程序人生]
 ---
-<p>最近在写一个宏（用来检查Define.xml中CRF页码是否与aCRF上的页码一致）的时候有用到单词边界(“\b”)这个定位符，在SAS<span style="text-decoration: underline;"><a href="https://support.sas.com/documentation/cdl/en/lrdict/64316/HTML/default/viewer.htm#a003288497.htm" target="_blank">在线文档</a></span>中有其说明：\b matches a word boundary (the position between a word and a space)，实际上“\b”匹配的是单词字符（\w）和非单词字符（\W）之间的位置。单词字符包括字母数字字符和下划线[a-zA-Z0-9_]；非单词字符包括不为字母数字字符或下划线的任何字符。<!--more-->“\b”匹配单词边界，不匹配任何字符，是零宽度的；匹配的只是一个位置，这个位置的一侧是构成单词的字符，另一侧为非单词字符、字符串的开始或结束位置。“\b”一般应用需要匹配某一单词字符组成的字符串，但这一字符不能包含在同样由单词字符组成的更长的字符中。下面通过一个实例来简单的介绍一下这个元字符。</p>
+<p>最近在写一个宏（用来检查Define.xml中CRF页码是否与aCRF上的页码一致）的时候有用到单词边界(“\b”)这个定位符，在SAS<span style="text-decoration: underline;"><a href="https://support.sas.com/documentation/cdl/en/lrdict/64316/HTML/default/viewer.htm#a003288497.htm" target="_blank">在线文档</a></span>中有其说明：\b matches a word boundary (the position between a word and a space)，实际上“\b”匹配的是单词字符（\w）和非单词字符（\W）之间的位置。单词字符包括字母数字字符和下划线[a-zA-Z0-9_]；非单词字符包括不为字母数字字符或下划线的任何字符。“\b”匹配单词边界，不匹配任何字符，是零宽度的；匹配的只是一个位置，这个位置的一侧是构成单词的字符，另一侧为非单词字符、字符串的开始或结束位置。“\b”一般应用需要匹配某一单词字符组成的字符串，但这一字符不能包含在同样由单词字符组成的更长的字符中。下面通过一个实例来简单的介绍一下这个元字符。</p>
 <p>设有宏变量varlst的值为”LBCAT|LBSTAT|LBTEST|LBTESTCD“，字符串VAR_HAVE="LBSTAT=NOT DONE when LBTESTCD=LBALL and LBCAT=HEMATOLOGY"，想要实现的是将字符串VAR_HAVE中非宏变量中的单词删除掉，即只保留宏变量中出现的单词。分情况讨论：</p>
 <ol>
 	<li>当程序为：
