@@ -9,7 +9,6 @@ categories: [程序人生]
 ---
 <p>今天一个同事和我说，她在做<span style="text-decoration: underline;"><a href="http://www.cdisc.org/define-xml" target="_blank">Define.xml</a></span>时碰到一个奇怪的问题：最后要生成Define.xml的数据集中已经去除了各种特殊字符，但是生成的Define.xml文件有些地方仍然会有空格（经查询为‘ODOA’x即回车和换行符），见下图：</p>
 <p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/05/Define.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/05/Define.jpg" alt="Define" /></a></p>
-<p><!--more--></p>
 <p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/05/0A0D.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/05/0A0D.jpg" alt="0A0D" /></a></p>
 <p>接着看了下她的程序：</p>
 <p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/05/Code.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/05/Code.jpg" alt="Code" /></a></p>
