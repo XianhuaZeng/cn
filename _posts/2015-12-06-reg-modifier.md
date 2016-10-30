@@ -7,7 +7,7 @@ comments: true
 tags: [Modifier, Regular Expression, 正则表达式]
 categories: [程序人生]
 ---
-<p>      在介绍修饰符之前，首先介绍一下在<span style="text-decoration: underline;"><a href="https://www.perl.org/" target="_blank">Perl</a></span>中的两个基本函数：</p>
+<p>在介绍修饰符之前，首先介绍一下在<span style="text-decoration: underline;"><a href="https://www.perl.org/" target="_blank">Perl</a></span>中的两个基本函数：</p>
 <blockquote>
 <p>match( $string, $pattern );<br />
  subst( $string, $pattern, $replacement );</p>
@@ -26,7 +26,7 @@ re=prxparse(pattern);</code></pre>
 re=prxparse(pattern);</code></pre>
 </li>
 </ol>
-<p>      上面有提到另一种替换的操作符：<code>s###</code>（<code>s#PATTERN#REPLACEMENT#</code>），下面介绍一下这个操作符的用处。我们知道在表达式中如果要匹配一些元字符的时候，如<code>/, (, .</code>，则需要在元字符前面加一个转义符\来屏蔽元字符的特殊含义以达到匹配元字符本身的目的。而当<code>PATTERN</code>或<code>REPLACEMENT</code>中含有多个元字符，则需要写多个转义符<code>\</code>，这样就会有点麻烦。所以这种情况就可用<code>s###</code>（<code>s#PATTERN#REPLACEMENT#</code>），因为在这种操作符中可以不用使用转义符。如下例：</p>
+<p>上面有提到另一种替换的操作符：<code>s###</code>（<code>s#PATTERN#REPLACEMENT#</code>），下面介绍一下这个操作符的用处。我们知道在表达式中如果要匹配一些元字符的时候，如<code>/, (, .</code>，则需要在元字符前面加一个转义符\来屏蔽元字符的特殊含义以达到匹配元字符本身的目的。而当<code>PATTERN</code>或<code>REPLACEMENT</code>中含有多个元字符，则需要写多个转义符<code>\</code>，这样就会有点麻烦。所以这种情况就可用<code>s###</code>（<code>s#PATTERN#REPLACEMENT#</code>），因为在这种操作符中可以不用使用转义符。如下例：</p>
 <pre><code>path=prxchange("s/.*\/(.*)\/\w*\.jpg/\/home\/cn\/picture\/$1\/Cheshire_cat.jpg/", 1, "http://www.xianhuazeng.com/cnuploads/2015/Cheshire_cat.jpg");
 path=prxchange("s#.*/(.*)/\w*.jpg#/home/cn/picture/$1/Cheshire_cat.jpg#", 1, "http://www.xianhuazeng.com/cnuploads/2015/Cheshire_cat.jpg");
 </code></pre>
