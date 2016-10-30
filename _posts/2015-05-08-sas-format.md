@@ -8,7 +8,7 @@ tags: [CALL EXECUTE, FILENAME, PROC FORMAT]
 categories: [程序人生]
 ---
 <p>不管是做AD还是TFL，我们经常会碰到要创建Format。当Format中条目不多时我们可以直接用PROC FORMAT来创建，但是当条目很多时，这种方法就不方便了。下面详细介绍其他几种方法：</p>
-<p>      设有数据集如下，假设要创建START为AVISITN，LABEL为AVISIT的Format：<!--more--></p>
+<p>设有数据集如下，假设要创建START为AVISITN，LABEL为AVISIT的Format：<!--more--></p>
 <p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/05/Format.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/05/Format.jpg" alt="Format" /></a></p>
 <ol>
 	<li>通过<a href="http://support.sas.com/documentation/cdl/en/mcrolref/67912/HTML/default/viewer.htm#n1q1527d51eivsn1ob5hnz0yd1hx.htm" target="_blank"><span style="text-decoration: underline;">CALL EXECUTE</span></a>创建。
