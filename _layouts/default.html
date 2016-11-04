@@ -40,17 +40,17 @@
         {{ content }}
         </article>
       </div>
+    <script type="text/javascript">
+      $(document).ready(function(){ 
+       $(window).scroll(function(){
+        o.css("top",Math.max(80,260-$(this).scrollTop()));
+      });
+    });
+    </script>  
     </div>
        <div id="totop">
       <a title="返回顶部"><img src="/images/scrollup.png"/></a>
     </div>
     <script src="/js/totop.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function(){ 
-       $(window).scroll(function(){
-        o.css("top",Math.max(80,260-$(this).scrollTop()));
-      });
-    });
-    </script>
   </body>
 </html>
