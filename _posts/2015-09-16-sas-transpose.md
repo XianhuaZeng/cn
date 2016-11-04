@@ -7,7 +7,7 @@ comments: true
 tags: [PROC TRANSPOSE, 转置]
 categories: [程序人生]
 ---
-<p>  <a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/09/Transpose.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/09/Transpose.jpg" alt="Transpose" /></a><span style="text-decoration: underline;"><a href="https://support.sas.com/documentation/cdl/en/proc/61895/HTML/default/viewer.htm#a000063663.htm" target="_blank">PROC TRANSPOSE</a></span>是SAS中用来对数据集进行行列转置的过程步，有时候可能需要经过多次PROC TRANSPOSE才能得到我们想的结果。今天无意中看到一篇博文，其中的<span style="text-decoration: underline;"><a href="http://saslist.net/archives/255" target="_blank">例2</a></span>（见上图），博主采用辅助变量加PROC TRANSPOSE来实现。下面我介绍另外两种方法。</p>
+<p>  <a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/09/Transpose.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/09/Transpose.jpg" alt="Transpose" /></a><span style="text-decoration: none;"><a href="https://support.sas.com/documentation/cdl/en/proc/61895/HTML/default/viewer.htm#a000063663.htm" target="_blank">PROC TRANSPOSE</a></span>是SAS中用来对数据集进行行列转置的过程步，有时候可能需要经过多次PROC TRANSPOSE才能得到我们想的结果。今天无意中看到一篇博文，其中的<span style="text-decoration: none;"><a href="http://saslist.net/archives/255" target="_blank">例2</a></span>（见上图），博主采用辅助变量加PROC TRANSPOSE来实现。下面我介绍另外两种方法。</p>
 <ol>
 	<li>不用PROC TRANSPOSE，代码如下：
 

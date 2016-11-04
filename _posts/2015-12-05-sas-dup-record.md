@@ -9,13 +9,13 @@ categories: [程序人生]
 ---
 <p>SAS程序猿/媛在处理数据的时候，经常会遇到要处理有关重复记录的问题，其中有些重复记录是我们需要的，而有的则是多余的。如果是多余的直接去重：</p>
 <ol>
-	<li><span style="text-decoration: underline;"><a href="https://support.sas.com/documentation/cdl/en/proc/61895/HTML/default/viewer.htm#a000146878.htm" target="_blank">PROC SORT</a></span>，其中有两个选项NODUPKEY、NODUPRECS（NODUP），第一个是按照BY变量来去重，第二是比较整条记录来去重，重复的记录可以用DUPOUT=来保留。程序如下：
+	<li><span style="text-decoration: none;"><a href="https://support.sas.com/documentation/cdl/en/proc/61895/HTML/default/viewer.htm#a000146878.htm" target="_blank">PROC SORT</a></span>，其中有两个选项NODUPKEY、NODUPRECS（NODUP），第一个是按照BY变量来去重，第二是比较整条记录来去重，重复的记录可以用DUPOUT=来保留。程序如下：
 <pre><code>proc sort data=sashelp.class out=unq nodupkey dupout=dup;
     by WEIGHT;
 run;
 </code></pre>
 </li>
-	<li><a href="http://support.sas.com/documentation/cdl/en/lrcon/65287/HTML/default/viewer.htm#n1b4cbtmb049xtn1vh9x4waiioz4.htm" target="_blank"><span style="text-decoration: underline;">HASH</span></a>，程序如下：
+	<li><a href="http://support.sas.com/documentation/cdl/en/lrcon/65287/HTML/default/viewer.htm#n1b4cbtmb049xtn1vh9x4waiioz4.htm" target="_blank"><span style="text-decoration: none;">HASH</span></a>，程序如下：
 <pre><code>data _null_;
     if 0 then set sashelp.class;
     if _n_=1 then do;
@@ -43,7 +43,7 @@ data uni dup;
 run;
 </code></pre>
 </li>
-	<li><span style="text-decoration: underline;"><a href="https://support.sas.com/documentation/cdl/en/proc/61895/HTML/default/viewer.htm#a002473669.htm" target="_blank">PROC SQL</a></span>，程序如下：
+	<li><span style="text-decoration: none;"><a href="https://support.sas.com/documentation/cdl/en/proc/61895/HTML/default/viewer.htm#a002473669.htm" target="_blank">PROC SQL</a></span>，程序如下：
 <pre><code>proc sql;
     create table uni as
         select * 
@@ -61,7 +61,7 @@ run;
 quit;
 </code></pre>
 </li>
-	<li><a href="http://support.sas.com/documentation/cdl/en/lrcon/65287/HTML/default/viewer.htm#n1b4cbtmb049xtn1vh9x4waiioz4.htm" target="_blank"><span style="text-decoration: underline;">HASH</span></a>，程序（SAS9.2+）如下：
+	<li><a href="http://support.sas.com/documentation/cdl/en/lrcon/65287/HTML/default/viewer.htm#n1b4cbtmb049xtn1vh9x4waiioz4.htm" target="_blank"><span style="text-decoration: none;">HASH</span></a>，程序（SAS9.2+）如下：
 <pre><code>data uni(drop=rc: i);
     if _n_=1 then do;
         if 0 then set sashelp.class;

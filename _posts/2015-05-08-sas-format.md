@@ -11,7 +11,7 @@ categories: [程序人生]
 <p>设有数据集如下，假设要创建START为AVISITN，LABEL为AVISIT的Format：</p>
 <p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/05/Format.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/05/Format.jpg" alt="Format" /></a></p>
 <ol>
-	<li>通过<a href="http://support.sas.com/documentation/cdl/en/mcrolref/67912/HTML/default/viewer.htm#n1q1527d51eivsn1ob5hnz0yd1hx.htm" target="_blank"><span style="text-decoration: underline;">CALL EXECUTE</span></a>创建。
+	<li>通过<a href="http://support.sas.com/documentation/cdl/en/mcrolref/67912/HTML/default/viewer.htm#n1q1527d51eivsn1ob5hnz0yd1hx.htm" target="_blank"><span style="text-decoration: none;">CALL EXECUTE</span></a>创建。
 <pre><code>/*方法1: CALL EXECUTE*/
 data _null_;
     set demo end=eof;
@@ -36,7 +36,7 @@ proc format;
 run;
 </code></pre>
 </li>
-	<li>通过<a href="http://support.sas.com/documentation/cdl/en/proc/65145/HTML/default/viewer.htm#n1e19y6lrektafn1kj6nbvhus59w.htm" target="_blank"><span style="text-decoration: underline;">CNTLIN=</span></a>选项创建。
+	<li>通过<a href="http://support.sas.com/documentation/cdl/en/proc/65145/HTML/default/viewer.htm#n1e19y6lrektafn1kj6nbvhus59w.htm" target="_blank"><span style="text-decoration: none;">CNTLIN=</span></a>选项创建。
 
 <pre><code>/*方法3: CNTLIN= option*/
 proc sql;
@@ -53,7 +53,7 @@ proc format library=work cntlin=fmt;
 run;
 </code></pre>
 </li>
-	<li>通过<a href="https://support.sas.com/documentation/cdl/en/lestmtsref/63323/HTML/default/p05r9vhhqbhfzun1qo9mw64s4700.htm" target="_blank"><span style="text-decoration: underline;">FILENAME</span></a>创建。
+	<li>通过<a href="https://support.sas.com/documentation/cdl/en/lestmtsref/63323/HTML/default/p05r9vhhqbhfzun1qo9mw64s4700.htm" target="_blank"><span style="text-decoration: none;">FILENAME</span></a>创建。
 
 <pre><code>/*方法4: FILENAME*/
 proc sql;

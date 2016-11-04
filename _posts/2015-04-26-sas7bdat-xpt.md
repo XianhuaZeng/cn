@@ -53,4 +53,4 @@ run;
 </code></pre>
 </li>
 </ol>
-<p>对于第一个程序xpt2sas.sas，获取某一路径下某种文件的文件名也可以用<span style="text-decoration: underline;"><a href="http://support.sas.com/documentation/cdl/en/hostwin/63285/HTML/default/viewer.htm#win-callrout-system.htm" target="_blank">CALL SYSTEM</a></span>，不过这种方法会产生一个临时文件，所以推荐使用<span style="text-decoration: underline;"><a href="http://support.sas.com/documentation/cdl/en/hostunx/61879/HTML/default/viewer.htm#pipe.htm" target="_blank">PIPE</a></span>。</p>
+<p>对于第一个程序xpt2sas.sas，获取某一路径下某种文件的文件名也可以用<span style="text-decoration: none;"><a href="http://support.sas.com/documentation/cdl/en/hostwin/63285/HTML/default/viewer.htm#win-callrout-system.htm" target="_blank">CALL SYSTEM</a></span>，不过这种方法会产生一个临时文件，所以推荐使用<span style="text-decoration: none;"><a href="http://support.sas.com/documentation/cdl/en/hostunx/61879/HTML/default/viewer.htm#pipe.htm" target="_blank">PIPE</a></span>。</p>
