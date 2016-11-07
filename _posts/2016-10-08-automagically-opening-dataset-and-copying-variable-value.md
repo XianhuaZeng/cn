@@ -71,8 +71,8 @@ filename clip clipbrd;
 data _null_;
     file clip;
     length value $32767;
-	  if &amp;increment &lt;= countw("&amp;varlst", "@") then value=scan("&amp;varlst", &amp;increment, "@");
-	  else value=scan("&amp;varlst", countw("&amp;varlst", "@"), "@");
+    if &amp;increment &lt;= countw("&amp;varlst", "@") then value=scan("&amp;varlst", &amp;increment, "@");
+    else value=scan("&amp;varlst", countw("&amp;varlst", "@"), "@");
     put value;
 run;
 
