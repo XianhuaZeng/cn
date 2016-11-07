@@ -29,13 +29,16 @@ filename clip clear;";
 {% highlight sas %}%macro markcode();
 gsubmit "
 dm 'wcopy';
+
 filename clip clipbrd;
+
 data _null_;
     infile clip end=eof;
     input;
     call execute(_INFILE_);
     if eof then call execute('%nrstr(dm ''vt &syslast;'' continue ;)');
 run;
+
 filename clip clear;";
 %mend markcode;
 {% endhighlight %}
