@@ -12,6 +12,7 @@ categories: [程序人生]
 <ol>
 	<li>当程序为：
 <pre><code>%let varlst=LBCAT|LBSTAT|LBTEST|LBTESTCD;
+
 data test;
     VAR_HAVE='LBSTAT=NOT DONE when LBTESTCD=LBALL and LBCAT=HEMATOLOGY';
     VAR_WANT=compbl(prxchange("s/.*?(&amp;varLst.)?/$1 /", -1, cats(VAR_HAVE)));
@@ -22,6 +23,7 @@ run;
 </li>
 	<li>当程序为：
 <pre><code>%let varlst=LBCAT|LBSTAT|LBTEST|LBTESTCD;
+
 data test;
     VAR_HAVE='LBSTAT=NOT DONE when LBTESTCD=LBALL and LBCAT=HEMATOLOGY';
     VAR_WANT=compbl(prxchange("s/.*?(\b&amp;varLst.\b)?/$1 /", -1, cats(VAR_HAVE)));
@@ -32,6 +34,7 @@ run;
 </li>
 	<li>当程序为：
 <pre><code>%let varlst=LBCAT|LBSTAT|LBTEST|LBTESTCD;
+
 data test;
     VAR_HAVE='LBSTAT=NOT DONE when LBTESTCD=LBALL and LBCAT=HEMATOLOGY';
     VAR_WANT=compbl(prxchange("s/.*?(\b(&amp;varLst.)\b)?/$1 /", -1, cats(VAR_HAVE)));
