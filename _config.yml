@@ -1,4 +1,4 @@
-permalink: /:year/:month/:title/
+permalink: /:year/:month/:day/:title/
 url: http://www.xianhuazeng.com/cn
 author: 曾宪华
 highlighter: rouge
