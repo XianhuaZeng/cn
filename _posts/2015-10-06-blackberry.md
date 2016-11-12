@@ -2,7 +2,7 @@
 layout: post
 title: 挥之不去的黑莓情结
 date: 2015-10-06 21:25
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [Blackberry, 黑莓]
 categories: [杂七杂八]

@@ -2,7 +2,7 @@
 layout: post
 title: 正则表达式之正向预查(?=...)
 date: 2016-11-11 22:54
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [PRXCHANGE, Regular Expression, 正则表达式]
 categories: [程序人生]

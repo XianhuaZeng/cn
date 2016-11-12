@@ -2,7 +2,7 @@
 layout: post
 title: Annotate Facility之生存曲线
 date: 2015-08-29 16:55
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [Annotate, Kaplan-Meier estimate, PROC GPLOT, Survival Curve, 生存分析]
 categories: [程序人生]

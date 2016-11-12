@@ -2,7 +2,7 @@
 layout: post
 title: .sas7bdat文件与.xpt文件批量转换
 date: 2015-04-26 22:17
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [CALL EXECUTE, CALL SYSTEM, PIPE, PRXCHANGE]
 categories: [程序人生]

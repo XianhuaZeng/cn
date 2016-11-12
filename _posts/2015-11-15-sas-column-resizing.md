@@ -2,7 +2,7 @@
 layout: post
 title: 批量改变SAS数据集字符型变量的长度
 date: 2015-11-15 11:22
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [CDISC, Column Resizing, DICTIONARY Tables, SASHELP Views]
 categories: [程序人生]

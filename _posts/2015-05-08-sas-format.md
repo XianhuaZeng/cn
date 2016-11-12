@@ -2,7 +2,7 @@
 layout: post
 title: 创建SAS Format的几种方法
 date: 2015-05-08 21:37
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [CALL EXECUTE, FILENAME, PROC FORMAT]
 categories: [程序人生]

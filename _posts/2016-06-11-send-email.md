@@ -2,7 +2,7 @@
 layout: post
 title: 如何用SAS发送邮件
 date: 2016-06-11 15:53
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [Email, FILENAME, 发邮件]
 categories: [程序人生]

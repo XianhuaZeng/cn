@@ -2,7 +2,7 @@
 layout: post
 title: 一个关于SAS转置的问题
 date: 2015-09-16 20:57
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [PROC TRANSPOSE, 转置]
 categories: [程序人生]

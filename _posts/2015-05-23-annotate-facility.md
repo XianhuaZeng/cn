@@ -2,7 +2,7 @@
 layout: post
 title: 认识Annotate Facility
 date: 2015-05-23 01:25
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [Annotate, Figure, Graph]
 categories: [程序人生]

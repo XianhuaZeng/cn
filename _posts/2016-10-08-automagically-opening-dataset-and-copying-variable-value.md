@@ -2,7 +2,7 @@
 layout: post
 title: SAS自动打开数据集及复制变量值
 date: 2016-10-08 21:36
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [DM, GSUBMIT, PharmaSUG, PharmaSUG China 2016]
 categories: [程序人生]

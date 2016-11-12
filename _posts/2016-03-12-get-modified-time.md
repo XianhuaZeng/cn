@@ -2,7 +2,7 @@
 layout: post
 title: SAS获取某目录下某种类型文件最后修改时间
 date: 2016-03-12 12:58
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [FILENAME, PIPE, sed]
 categories: [程序人生]

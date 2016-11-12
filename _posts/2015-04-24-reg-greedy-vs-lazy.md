@@ -2,7 +2,7 @@
 layout: post
 title: 正则表达式之贪婪匹配 VS 非贪婪匹配
 date: 2015-04-24 22:31
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [Regular Expression, 正则表达式]
 categories: [程序人生]

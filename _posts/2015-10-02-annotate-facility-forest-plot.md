@@ -2,7 +2,7 @@
 layout: post
 title: Annotate Facility之森林图
 date: 2015-10-02 01:25
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [Annotate, Forest plot, PROC GPLOT, 森林图]
 categories: [程序人生]

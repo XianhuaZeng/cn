@@ -2,7 +2,7 @@
 layout: post
 title: 我以为我是感冒了
 date: 2015-07-25 21:03
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [肺炎, 输液]
 categories: [生活记录]

@@ -2,7 +2,7 @@
 layout: post
 title: 根据变量值拆分SAS数据集
 date: 2015-11-14 16:02
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [CALL EXECUTE, FILENAME, Hash Object]
 categories: [程序人生]

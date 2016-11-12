@@ -2,7 +2,7 @@
 layout: post
 title: 正则表达式模式修饰词
 date: 2015-12-06 12:35
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [Modifier, Regular Expression, 正则表达式]
 categories: [程序人生]

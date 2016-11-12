@@ -2,7 +2,7 @@
 layout: post
 title: SAS获取某目录下所有指定类型的文件名称
 date: 2016-02-25 22:30
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [AWK, FILENAME, PIPE, sed]
 categories: [程序人生]

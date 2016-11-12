@@ -2,7 +2,7 @@
 layout: post
 title: SAS数据集中重复记录问题
 date: 2015-12-05 17:01
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [Hash Object, NODUPKEY, 去重]
 categories: [程序人生]

@@ -2,7 +2,7 @@
 layout: post
 title: SAS宏程序中的查询
 date: 2015-05-27 20:49
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [Macro, PIPE, 宏]
 categories: [程序人生]

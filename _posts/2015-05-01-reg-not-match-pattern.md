@@ -2,7 +2,7 @@
 layout: post
 title: 正则表达式之非捕获匹配(?:...)
 date: 2015-05-01 21:42
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [PRXCHANGE, Regular Expression, 正则表达式]
 categories: [程序人生]

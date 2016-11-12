@@ -2,7 +2,7 @@
 layout: post
 title: 一个关于Define.xml的奇怪问题
 date: 2015-05-19 20:07
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [CDISC, Define.xml, PRXCHANGE, Regular Expression, 正则表达式]
 categories: [程序人生]

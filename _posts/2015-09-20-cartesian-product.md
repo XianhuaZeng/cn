@@ -2,7 +2,7 @@
 layout: post
 title: SAS中产生笛卡尔积的几种方法
 date: 2015-09-20 19:02
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [Cartesian Product, Hash Object, PROC SQL, 笛卡尔积]
 categories: [程序人生]

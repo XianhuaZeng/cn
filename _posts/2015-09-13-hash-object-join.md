@@ -2,7 +2,7 @@
 layout: post
 title: SAS中哈希表的连接问题
 date: 2015-09-13 18:47
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [Hash Object, Inner join, Left join, Right join, 哈希表]
 categories: [程序人生]

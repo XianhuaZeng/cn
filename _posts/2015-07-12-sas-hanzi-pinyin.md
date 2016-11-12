@@ -2,7 +2,7 @@
 layout: post
 title: SAS汉字转拼音解决方案
 date: 2015-07-12 02:57
-author: Xianhua.Zeng
+author: 曾宪华
 comments: true
 tags: [PRXCHANGE, 汉字转拼音]
 categories: [程序人生]
