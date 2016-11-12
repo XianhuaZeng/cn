@@ -39,7 +39,7 @@ run;</code></pre>
     STOP=length(STRING);
     call prxnext(REX, START, STOP, STRING, POSITION, LENGTH);
     do while(POSITION > 0);
-	    TEMP=substr(STRING, POSITION, LENGTH);
+        TEMP=substr(STRING, POSITION, LENGTH);
         PARAM=scan(TEMP, 1, '=');
         VALUE=substr(TEMP, length(PARAM)+2);
         VALUE=prxchange('s/[\)|,]$//', -1, cats(VALUE));
