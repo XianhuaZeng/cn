@@ -21,16 +21,16 @@ layout: default
 <span class="categories">
   属于
   {% for cat in page.categories %}
-  <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>&nbsp;
+  <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>
   {% endfor %}
   分类，
 </span>
 {% endif %}
 {% if page.tags.size > 0 %}
 <span class="tags">
-  被贴了 
+  被贴了
   {% for tag in page.tags %}
-  <a href="{{ site.url }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>&nbsp;
+  <a href="{{ site.url }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
   {% endfor %}
   书签
 </span>
