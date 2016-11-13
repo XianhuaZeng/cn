@@ -15,22 +15,24 @@ layout: default
 </span>
 <br />
 <span class="license">
-  Published under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">(CC) BY-NC-SA</a>
+  本文采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh">署名-非商业性使用-相同方式共享 3.0许可协议</a>
 </span>
 {% if page.categories.size > 0 %}
 <span class="categories">
-  in categories
+  属于
   {% for cat in page.categories %}
   <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>&nbsp;
   {% endfor %}
+  分类
 </span>
 {% endif %}
 {% if page.tags.size > 0 %}
 <span class="tags">
-  tagged with 
+  被贴了 
   {% for tag in page.tags %}
   <a href="{{ site.url }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>&nbsp;
   {% endfor %}
+  书签
 </span>
 {% endif %}
 </section>
