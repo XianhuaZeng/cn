@@ -9,20 +9,7 @@
     <link rel="stylesheet" href="/media/css/style.css">
     <link rel="stylesheet" href="/media/css/highlight.css">
     <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript">
-      $(function () {
-        var THRESHOLD = 50;
-        var $top = $('.back-to-top');
-
-        $(window).on('scroll', function () {
-          $top.toggleClass('back-to-top-on', window.pageYOffset > THRESHOLD);
-        });
-
-        $top.on('click', function () {
-          $('body').velocity('scroll');
-        });
-      });
-    </script>
+    <script type="text/javascript" src="/media/js/utils.js"></script>
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-65950412-2']);
