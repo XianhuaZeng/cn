@@ -27,7 +27,7 @@ run;</code></pre>
 我们可以看到上面的宏调用的参数值都是简单的字符，如果参数值中包含逗号上面的程序就不能用了。
 比如下面这样的：
 <pre><code>STRING='%test(var1=123, var2=%nrstr(NOTE: Y=Yes, N=No, U=Unkonw), var3=%nrstr(NOTE: (Y=Yes (or true))));';</code></pre>
-所以我们可以借助正则表达式中的<span style="text-decoration: none;"><a href="https://support.sas.com/documentation/cdl/en/lrdict/64316/HTML/default/viewer.htm#a003288497.htm" target="_blank">正向预查</a></span><code>(?=...)</code>先转换一下参数中的逗号，程序如下：
+这个时候我们就要先转换一下参数中的逗号，借助正则表达式中的<span style="text-decoration: none;"><a href="https://support.sas.com/documentation/cdl/en/lrdict/64316/HTML/default/viewer.htm#a003288497.htm" target="_blank">正向预查</a></span><code>(?=...)</code>可以轻松地完成，程序如下：
 <pre><code>STRING=prxchange('s/,(?=[^\(]*\)[,|\)])/~/', -1, STRING);</code></pre>
 <code>(?=...)</code>表示正向匹配，且不保存所匹配的内容。我们可以将它理解为自定义的边界(\b)，这个边界位于表达式末。上面的表达式中<code>[^\(]*</code>表示匹配非括号字符零次或多次，<code>\)[,|\)]</code>表示匹配<code>),</code>或者<code>))</code>，整个表达式的意思是只替换后面是<code>),</code>或者<code>))</code>的逗号，比如第一个逗号，因为后面有<code>%nrstr(</code>，包含有<code>(</code>，所以匹配不成功，逗号不会被替换。第二个逗号，因为后面有<code>),</code>，所以匹配成功。
 完整的程序如下：
