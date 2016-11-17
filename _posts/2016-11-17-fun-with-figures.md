@@ -1,13 +1,13 @@
 ---
 layout: post
 title: 一道小学生的趣味数学题
-date: 2016-11-17 21:54
+date: 2016-11-17 22:54
 author: 曾宪华
 comments: true
 tags: [PRXCHANGE]
 categories: [程序人生]
 ---
-<p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2016/11/Fun.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2016/11/Fun.jpg" alt="Fun" /></a>据说上图（来源于网络）中这道小学生趣味题只要聪明一点的小学生都可以解出来，成年人应该在一分钟以内解出。我也试着用SAS来解答， 思路如下：首先获取所有的数字出现的位置，然后与完整的位置（1234）比较，去重存异；根据题中的提示每次输入有两位数字正常且位置都不对，故排除只出现一次或者出现4次的数字；最后将数字的多个位置和已被占的单一位置进行比较，去重存异。重复这一操作直到得到每个数字的正确位置。完整的程序如下：
+<p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2016/11/Fun.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2016/11/Fun.jpg" alt="Fun" /></a>据说上图（来源于网络）中这道小学生趣味题只要聪明一点的小学生都可以解出来，成年人估计只要一分钟。我也试着用SAS来解答， 思路如下：首先获取所有的数字出现的位置，然后与完整的位置（1234）比较，去重存异；根据题中的提示每次输入有两位数字正常且位置都不对，故排除只出现一次或者出现4次的数字；最后将数字的多个位置和已被占的单一位置进行比较，去重存异。重复这一操作直到得到每个数字的正确位置。完整的程序如下：
 <pre><code>%let code=6087 5173 1358 3825 2531;
 
 data temp;
