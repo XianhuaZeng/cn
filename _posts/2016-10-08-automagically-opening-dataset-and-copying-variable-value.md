@@ -64,7 +64,10 @@ proc sql noprint;
     ;
 quit;
 
-%let increment=%eval(&amp;increment+1);
+data _null_;
+    if ^symexist("increment") then call symputx("increment", 1, "g");
+    else call symputx("increment", 1 + input(symget("increment"), best.), "g"); 
+run;
 
 filename clip clipbrd;
 
@@ -83,7 +86,6 @@ filename clip clear;';
 <p>接下来说下设置和用法。设置如下：</p>
 <ol>
 	<li>将这些宏放到某一自动编译宏的逻辑库，如sasautos值对应的路径</li>
-	<li>在初始化程序中设置一个名为INCREMENT，初始值为0的全局宏变量</li>
 	<li>在命令行输入以下命令为宏设置对应的快捷键以便调用宏
 <pre><code>keydef 'F9' '%markdsn'
 keydef 'F10' '%markcode'
