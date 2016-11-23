@@ -2,7 +2,15 @@
 <!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
+    <loc>http://www.xianhuazeng.com/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>http://www.xianhuazeng.com/cn/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -10,47 +18,7 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://www.xianhuazeng.com/cn/2015/05/19/define-xml/</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://www.xianhuazeng.com/cn/2015/06/01/sqs/</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://www.xianhuazeng.com/cn/2015/07/16/pdf-bookmark/</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://www.xianhuazeng.com/cn/2015/04/24/reg-greedy-vs-lazy/</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://www.xianhuazeng.com/cn/2015/04/26/sas7bdat-xpt/</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://www.xianhuazeng.com/cn/2015/08/29/annotate-facility-km-plot/</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://www.xianhuazeng.com/cn/2015/09/20/cartesian-product/</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://www.xianhuazeng.com/cn/2015/10/06/blackberry/</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://www.xianhuazeng.com/cn/2015/11/14/sas-split-dataset/</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
     <loc>http://www.xianhuazeng.com/cn/2015/05/01/reg-not-match-pattern/</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://www.xianhuazeng.com/cn/2015/12/06/reg-modifier/</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -58,19 +26,11 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://www.xianhuazeng.com/cn/2016/03/12/get-modified-time/</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
     <loc>http://www.xianhuazeng.com/cn/2015/05/23/annotate-facility/</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://www.xianhuazeng.com/cn/2015/05/27/sas-macro-checks/</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://www.xianhuazeng.com/cn/2016/10/08/automagically-opening-dataset-and-copying-variable-value/</loc>
+    <loc>http://www.xianhuazeng.com/cn/2015/04/24/reg-greedy-vs-lazy/</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -78,7 +38,7 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://www.xianhuazeng.com/cn/2015/07/12/sas-hanzi-pinyin/</loc>
+    <loc>http://www.xianhuazeng.com/cn/2015/05/27/sas-macro-checks/</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -86,7 +46,7 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://www.xianhuazeng.com/cn/2015/08/15/reg-book/</loc>
+    <loc>http://www.xianhuazeng.com/cn/2015/07/12/sas-hanzi-pinyin/</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -94,7 +54,11 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://www.xianhuazeng.com/cn/2015/09/16/sas-transpose/</loc>
+    <loc>http://www.xianhuazeng.com/cn/2015/08/15/reg-book/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/cn/2015/04/26/sas7bdat-xpt/</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -102,11 +66,11 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://www.xianhuazeng.com/cn/feed/</loc>
+    <loc>http://www.xianhuazeng.com/cn/2015/09/16/sas-transpose/</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://www.xianhuazeng.com/cn/2015/10/02/annotate-facility-forest-plot/</loc>
+    <loc>http://www.xianhuazeng.com/cn/2015/05/19/define-xml/</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -114,15 +78,11 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://www.xianhuazeng.com/cn/links/</loc>
+    <loc>http://www.xianhuazeng.com/cn/2015/10/02/annotate-facility-forest-plot/</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://www.xianhuazeng.com/cn/2015/11/08/sas-dm/</loc>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://www.xianhuazeng.com/</loc>
+    <loc>http://www.xianhuazeng.com/cn/2015/06/01/sqs/</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -130,7 +90,11 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://www.xianhuazeng.com/cn/2015/12/05/sas-dup-record/</loc>
+    <loc>http://www.xianhuazeng.com/cn/2015/11/08/sas-dm/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/cn/2015/07/16/pdf-bookmark/</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -138,7 +102,7 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://www.xianhuazeng.com/cn/2016/02/25/get-filename/</loc>
+    <loc>http://www.xianhuazeng.com/cn/2015/12/05/sas-dup-record/</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -146,7 +110,15 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://www.xianhuazeng.com/cn/wp-content/uploads/2015/07/Hanzi_Pinyin.zip</loc>
+    <loc>http://www.xianhuazeng.com/cn/2015/08/29/annotate-facility-km-plot/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/cn/2016/02/25/get-filename/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/cn/2015/09/20/cartesian-product/</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -158,6 +130,10 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>http://www.xianhuazeng.com/cn/2015/10/06/blackberry/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>http://www.xianhuazeng.com/cn/2016/11/17/fun-with-figures/</loc>
     <changefreq>daily</changefreq>
   </url>
@@ -166,7 +142,11 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://www.xianhuazeng.com/cn/guestbook/</loc>
+    <loc>http://www.xianhuazeng.com/cn/2015/11/14/sas-split-dataset/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/cn/2015/12/06/reg-modifier/</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -174,13 +154,89 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://www.xianhuazeng.com/cn/wp-content/uploads/2015/11/tool.zip</loc>
+    <loc>http://www.xianhuazeng.com/cn/guestbook/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/2015/05/01/splitting-a-string-using-perl-regular-expression/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/cn/2016/03/12/get-modified-time/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/2015/11/08/sas-display-manager-commands/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/cn/2016/10/08/automagically-opening-dataset-and-copying-variable-value/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/feed/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/links/</loc>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://www.xianhuazeng.com/cn/tags/</loc>
     <changefreq>daily</changefreq>
   </url>
- </urlset>
-<!--<guid value="b927f5e9-b61a-4c1c-8a80-d268dc57558b" />-->
+  <url>
+    <loc>http://www.xianhuazeng.com/en/2015/05/08/creating-a-sas-format-from-a-data-set/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/cn/wp-content/uploads/2015/07/Hanzi_Pinyin.zip</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/2015/11/14/splitting-data-set-based-on-a-variable/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/cn/wp-content/uploads/2015/11/tool.zip</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/about/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/cn/feed/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/categories/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/cn/links/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/2015/04/19/clinical-sas-programming/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/2015/11/06/parsing-comments-from-blank-crf-with-perl-regular-expression/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/2016/10/16/automagically-opening-dataset-and-copying-variable-value/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/guestbook/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/tags/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+</urlset>
+<!--<guid value="ae93cef4-ac43-43ae-af8e-8703a586f48e" />-->
 <!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
