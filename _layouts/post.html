@@ -42,10 +42,10 @@ layout: default
 <hr>
 <div class="post-recent">
   {% if page.previous %}
-    <p>上一篇 <a href="{{ page.previous.url | prepend: site.baseurl }}">{{ page.previous.title }}</a></p>
+    <p>上一篇 <a href="{{ page.previous.url | prepend: site.baseurl }}">{{ page.previous.title }}</a>
   {% endif %}
   {% if page.next %}
-    <p>下一篇 <a href="{{ page.next.url | prepend: site.baseurl }}">{{ page.next.title }}</a></p>
+    <br>下一篇 <a href="{{ page.next.url | prepend: site.baseurl }}">{{ page.next.title }}</a></p>
   {% endif %}
 </div>
 {% include comments.md %}
