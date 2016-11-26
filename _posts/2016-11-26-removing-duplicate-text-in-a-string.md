@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SAS删除字符串中的重复项
-date: 2016-11-25 15:54
+date: 2016-11-26 15:54
 author: 曾宪华
 comments: true
 tags: [Regular Expression, 正则表达式, PRXCHANGE]
@@ -33,7 +33,7 @@ run;
     STRING='cow chicken fox cow chicken fox cows chickens foxes';
     REX1=prxparse('s/(\b\w+\b)(.*?)(\b\1+\b)/\2\3/i');
     REX2=prxparse('/(\b\w+\b)(.*?)(\b\1+\b)/i');
-    do i=1 to 1000;
+    do i=1 to 100;
         STRING_=prxchange(REX1, -1, compbl(STRING));
         STRING=STRING_;
         if not prxmatch(REX2, compbl(STRING)) then leave;
