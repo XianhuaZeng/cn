@@ -10,14 +10,15 @@ categories: [程序人生]
 SAS程序猿/媛有时候会碰到去除字符串中重复值的问题，用常用的字符函数如SCAN，SUBSTR可能会很费劲，用正则表达式来处理就简单了。示例程序如下：
 <pre><code>data _null_;
     infile cards truncover;
-    input Column1 $32767.;
+    input STRING $32767.;
     REX1=prxparse('s/([a-z].+?\.\s+)(.*?)(\1+)/\2\3/i');
     REX2=prxparse('/([a-z].+?\.\s+)(.*?)(\1+)/i');
     do i=1 to 100;
-        Column1_=prxchange(REX1, -1, compbl(Column1));
-        Column1=Column1_;
+        STRING_=prxchange(REX1, -1, compbl(STRING));
+        STRING=STRING_;
+        if not prxmatch(REX2, compbl(STRING)) then leave;
     end;
-    put Column1=;
+    put STRING=;
 cards;
 a. The cow jumps over the moon.
 a. The cow jumps over the moon. b. The chicken crossed the road. c. The quick brown fox jumped over the lazy dog. a. The cow jumps over the moon. 
