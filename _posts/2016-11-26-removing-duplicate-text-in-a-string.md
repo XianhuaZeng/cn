@@ -10,17 +10,18 @@ categories: [程序人生]
 SAS程序猿/媛有时候会碰到去除字符串中重复值的问题，用常用的字符函数如SCAN，SUBSTR可能会很费劲，用正则表达式来处理就简单了。示例程序如下：
 <pre><code>data _null_;
     infile cards truncover;
-    input STRING $32767.;
-    REX1=prxparse('s/(.+?\.\s+)(?=[a-z].*?)(\1+)/\2\3/i');
-    REX2=prxparse('/(.+?\.\s+)(?=[a-z].*?)(\1+)/i');
+    input Column1 $32767.;
+    REX1=prxparse('s/([a-z].+?\.\s+)(.*?)(\1+)/\2\3/i');
+    REX2=prxparse('/([a-z].+?\.\s+)(.*?)(\1+)/i');
     do i=1 to 100;
-        STRING_=prxchange(REX1, -1, compbl(STRING));
-        STRING=STRING_;
-        if not prxmatch(REX2, compbl(STRING)) then leave;
+        Column1_=prxchange(REX1, -1, compbl(Column1));
+        Column1=Column1_;
     end;
-    put STRING=;
+    put Column1=;
 cards;
-a. The cow jumps over the moon. b. The chicken crossed the road. c. The quick brown fox jumped over the lazy dog.
+a. The cow jumps over the moon.
+a. The cow jumps over the moon. b. The chicken crossed the road. c. The quick brown fox jumped over the lazy dog. a. The cow jumps over the moon. 
+b. The chicken crossed the road. a. The cow jumps over the moon. b. The chicken crossed the road. c. The quick brown fox jumped over the lazy dog.
 a. The cow jumps over the moon. a. The cow jumps over the moon. b. The chicken crossed the road. b. The chicken crossed the road. c. The quick brown fox jumped over the lazy dog. c. The quick brown fox jumped over the lazy dog.
 a. The cows jump over the moon. a. The cows jump over the moon. b. The chickens crossed the road. b. The chickens crossed the road. c. The quick brown foxes jumped over the lazy dog. c. The quick brown foxes jumped over the lazy dog.
 a. The cow jumps over the moon. b. The chicken crossed the road.  c. The quick brown fox jumped over the lazy dog. a. The cow jumps over the moon.  b. The chicken crossed the road. c. The quick brown fox jumped over the lazy dog.
