@@ -1,7 +1,7 @@
 ---
 title: 关于本站
 layout: page
-comments: yes
+comments: no
 pagetitle: 关于本站
 ---
 

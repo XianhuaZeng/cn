@@ -2,7 +2,7 @@
 title: 推荐站点
 layout: page
 pagetitle: 推荐站点
-comments: yes
+comments: no
 ---
 
 - [The UNIX School](http://www.theunixschool.com/)

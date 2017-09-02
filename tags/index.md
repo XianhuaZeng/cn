@@ -1,7 +1,7 @@
 ---
 title: 标签
 layout: page
-comments: yes
+comments: no
 pagetitle: 标签
 ---
 
