@@ -1,5 +1,5 @@
 permalink: /:year/:month/:day/:title/
-url: /cn
+url: http://www.xianhuazeng.com/cn
 author: 曾宪华
 highlighter: rouge
 markdown: kramdown
