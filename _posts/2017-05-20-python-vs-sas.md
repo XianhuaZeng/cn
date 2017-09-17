@@ -8,7 +8,7 @@ tags: [Python, PROC FCMP, 自定义函数]
 categories: [程序人生]
 ---
 今天在群里看到同事讨论<span style="text-decoration: none;"><a href="https://www.python.org/" target="_blank">Python</a></span>函数的与SAS函数的问题。在Python中函数是组织好的，可重复使用的代码段，Python提供了许多内建函数，比如print()。用户也可以自己创建函数，即自定义函数。这一点和SAS宏类似。比如要计算x的n次方，Python代码如下：
-<<pre><code>def power(x, n):
+<pre><code>def power(x, n):
     s = 1
     while n > 0:
         n = n - 1
@@ -19,7 +19,7 @@ categories: [程序人生]
 power(2, 3)
 </code></pre>
 SAS程序如下：
-<<pre><code>/*Method 1*/
+<pre><code>/*Method 1*/
 %macro power(a, n);
 data _null_;
     POWER=1;
