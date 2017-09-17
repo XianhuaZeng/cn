@@ -7,7 +7,8 @@ comments: true
 tags: [PRXCHANGE, Regular Expression, 正则表达式]
 categories: [程序人生]
 ---
-<p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/09/QQ.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/09/QQ.jpg" alt="QQ" /></a>最近看到一个群友（QQ群：144839730，加群请扫上面的二维码）的问题：如何提取宏调用的参数和参数值？这个问题用常规的字符函数可能要多行才能解决，用<span style="text-decoration: none;"><a href="http://zh.wikipedia.org/zh/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F" target="_blank">正则表达式</a></span>就相对简单了，程序如下：
+<p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/09/QQ.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/09/QQ.jpg" alt="QQ" /></a></p>
+最近看到一个群友（QQ群：144839730，加群请扫上面的二维码）的问题：如何提取宏调用的参数和参数值？这个问题用常规的字符函数可能要多行才能解决，用<span style="text-decoration: none;"><a href="http://zh.wikipedia.org/zh/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F" target="_blank">正则表达式</a></span>就相对简单了，程序如下：
 <pre><code>data demo;
     STRING='%test(var1=123, var2=abc, var3=abc123);';
     REX=prxparse('/(\w+\s*=\s*.+?[,\)])/');
