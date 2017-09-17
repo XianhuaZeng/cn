@@ -7,8 +7,8 @@ comments: no
 tags: [SET, Hash Object]
 categories: [程序人生]
 ---
-<p><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2017/09/Compare.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/wp-content/uploads/2017/09/Compare.jpg" alt="Compare" /></a></p>
-<p>前几天看到一个群友（QQ群：<span style="text-decoration: none;"><a href="http://www.xianhuazeng.com/cn/wp-content/uploads/2015/09/QQ.jpg" target="_blank">144839730</a></span>）提的一个问题：求上图中X小于等于所有Y值的个数。比如，第一个Y为0，则5个X中小于等于0的个数为0。实现这一目的的方法有多种，最易懂的方法应该是转置加数组，下面介绍其他两种方法：</p>
+<p><a href="http://www.xianhuazeng.com/cn/images/2017/09/Compare.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/images/2017/09/Compare.jpg" alt="Compare" /></a></p>
+<p>前几天看到一个群友（QQ群：<span style="text-decoration: none;"><a href="http://www.xianhuazeng.com/cn/images/2015/09/QQ.jpg" target="_blank">144839730</a></span>）提的一个问题：求上图中X小于等于所有Y值的个数。比如，第一个Y为0，则5个X中小于等于0的个数为0。实现这一目的的方法有多种，最易懂的方法应该是转置加数组，下面介绍其他两种方法：</p>
 <ol><li>双SET：<pre><code>data have;
     input ID X Y;
 cards;
