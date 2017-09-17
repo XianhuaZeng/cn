@@ -4,7 +4,7 @@ title: Python函数与SAS宏
 date: 2017-05-20 22:11
 author: 曾宪华
 comments: true
-tags: [Python, PROC FCMP, 自定义函数]
+tags: [Python, SAS, PROC FCMP, 自定义函数]
 categories: [程序人生]
 ---
 今天在群里和同事讨论了<span style="text-decoration: none;"><a href="https://www.python.org/" target="_blank">Python</a></span>函数与SAS宏的问题，现记录一下。在Python中函数是组织好的，可以重复使用的代码段。Python提供了许多内建函数，比如print()。用户也可以自己创建函数，即自定义函数。这一点和SAS宏类似。下面以要计算x的n次方为例来比较两者的区别，Python代码如下：
