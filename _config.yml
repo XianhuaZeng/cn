@@ -3,3 +3,7 @@ url: http://www.xianhuazeng.com/cn
 author: 曾宪华
 highlighter: rouge
 markdown: kramdown
+# plug-ins
+gems:
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-redirect-from # redirect old URLs to new ones
