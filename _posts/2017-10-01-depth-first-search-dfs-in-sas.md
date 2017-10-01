@@ -39,7 +39,7 @@ data _null_;
         set idiom_list idiom_list end=last;
         h.add();
     end;
-    set idiom_list(where=(IDIOM='老老实实') rename=END_C=FIRST_C keep=IDIOM END_C);
+    set idiom_list(where=(IDIOM='胸有成竹') rename=END_C=FIRST_C keep=IDIOM END_C);
     put IDIOM=;
     if h.find(key: FIRST_C)=0 then put IDIOM=;
     do i=1 to 100;
