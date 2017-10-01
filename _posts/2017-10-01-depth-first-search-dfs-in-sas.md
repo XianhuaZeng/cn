@@ -7,7 +7,7 @@ comments: no
 tags: [DFS, HASH, PRXCHANGE, 成语接龙]
 categories: [程序人生]
 ---
-<p>今年国庆长假没有出游计划，我只能在朋友圈周游世界了。周游世界的同时正好有点时间来博客除除草了，2017年已过四分之三，目前只留下一篇博客（囧）。今天无意间翻到3年前回复过的一个<span style="text-decoration: none;"><a href="http://bbs.pinggu.org/thread-3204728-1-1.html" target="_blank">帖子</a></span>：用SAS做成语接龙。编程思路如下：首先导入<span style="text-decoration: none;"><a href="http://www.xianhuazeng.com/cn/images/2017/10/Idiom_list.zip">成语大全</a></span>，提取首尾汉字，将所有成语放入哈希表中，然后将成语最后一个汉字去哈希表中查询匹配，如果成功匹配则把哈希表中匹配的成语最后一个汉字做为KEY去查询匹配，直到遍历整个哈希表。更新的代码（SAS 9.2 for Windows）如下：</p><pre><code>/*导入成语列表*/
+<p>今年国庆长假没有出游计划，不过可以在朋友圈周游世界。周游世界的同时正好有点时间来博客除除草了，2017年已过四分之三，目前只留下一篇博客（囧）。今天无意间翻到3年前回复过的一个<span style="text-decoration: none;"><a href="http://bbs.pinggu.org/thread-3204728-1-1.html" target="_blank">帖子</a></span>：用SAS做成语接龙。编程思路如下：首先导入<span style="text-decoration: none;"><a href="http://www.xianhuazeng.com/cn/images/2017/10/Idiom_list.zip">成语大全</a></span>，提取首尾汉字，将所有成语放入哈希表中，然后将成语最后一个汉字去哈希表中查询匹配，如果成功匹配则把哈希表中匹配的成语最后一个汉字做为KEY去查询匹配，直到遍历整个哈希表。更新的代码（SAS 9.2 for Windows）如下：</p><pre><code>/*导入成语列表*/
 proc import datafile="D:\Demo\成语大全.txt"
     out=idiom_list
     replace;
