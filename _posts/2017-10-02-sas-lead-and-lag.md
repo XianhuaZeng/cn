@@ -41,10 +41,10 @@ run;
     end;
     set demo;
     LAG=lag(X);
-    hi.setcur(key: X);
+    hi.setcur(key: X); /*Specifies a starting key item for iteration*/
     rc=hi.next();
     if rc^=0 then LEAD=.;
     keep X LAG LEAD;
 run;
 </code></pre></li></ol>
-<p>上面第一种方法程序行数少，但是有两次SET的操作，所以当数据集较大时建议采用第二种方法以提高效率。</p>
+<p>上面第一种方法程序行数虽然少，但是有两次SET的操作，所以当数据集较大时建议采用第二种方法以提高效率。</p>
