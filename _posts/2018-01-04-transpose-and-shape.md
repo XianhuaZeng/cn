@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SAS中矩阵重组
+title: SAS矩阵重组
 date: 2018-01-04 22:02
 author: 曾宪华
 comments: no

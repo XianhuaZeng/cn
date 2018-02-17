@@ -7,7 +7,7 @@ comments: no
 tags: [PROC SUMMARY, CALL ALLCOMB, BAND]
 categories: [程序人生]
 ---
-<p>前几天在微信群里看到一个问题：求一个数组的子集。SAS中实现排列的方法有多种，最易懂的方法应该是<a href="http://support.sas.com/documentation/cdl/en/proc/65145/HTML/default/viewer.htm#p1nq9wozc7uw3hn1uni965howprl.htm" target="_blank"><span style="text-decoration: none;">PROC SUMMARY</span></a>以及<a href="http://support.sas.com/documentation/cdl/en/lefunctionsref/63354/HTML/default/viewer.htm#p0yx35py6pk47nn1vyrczffzrw25.htm" target="_blank"><span style="text-decoration: none;">CALL ALLCOMB</span></a>，两种方法的代码在<a href="https://stackoverflow.com/questions/29340151/generate-all-unique-permutations-of-an-array-in-sas" target="_blank"><span style="text-decoration: none;">这里</span></a>。下面介绍另外一个方法：一个DATA步一步到位：</p>
+<p>前几天在微信群里看到一个问题：求一个数组的子集。SAS中实现排列的方法有多种，最易懂的方法应该是<a href="http://support.sas.com/documentation/cdl/en/proc/65145/HTML/default/viewer.htm#p1nq9wozc7uw3hn1uni965howprl.htm" target="_blank"><span style="text-decoration: none;">PROC SUMMARY</span></a>以及<a href="http://support.sas.com/documentation/cdl/en/lefunctionsref/63354/HTML/default/viewer.htm#p0yx35py6pk47nn1vyrczffzrw25.htm" target="_blank"><span style="text-decoration: none;">CALL ALLCOMB</span></a>，两种方法的代码在<a href="https://stackoverflow.com/questions/29340151/generate-all-unique-permutations-of-an-array-in-sas" target="_blank"><span style="text-decoration: none;">这里</span></a>。下面介绍一个DATA步一步到位的方法：</p>
 <pre><code>data subsets;
     array set1[*] $ a b c d e ('a', 'b', 'c', 'd', 'e');
     array set2[*] bin1-bin5;

@@ -29,4 +29,4 @@ categories: [程序人生]
     keep CHAR COUNT FREQ;
 run;
 </code></pre>
-结果如下：<p><a href="http://www.xianhuazeng.com/cn/images/2018/02/Frequency.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/images/2018/02/Frequency.jpg" alt="Frequency" /></a></p>
+结果如下：<a href="http://www.xianhuazeng.com/cn/images/2018/02/Frequency.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/images/2018/02/Frequency.jpg" alt="Frequency" /></a>
