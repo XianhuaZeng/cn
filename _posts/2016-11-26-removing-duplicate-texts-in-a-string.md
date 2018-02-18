@@ -7,7 +7,7 @@ comments: true
 tags: [Regular Expression, 正则表达式, PRXCHANGE]
 categories: [程序人生]
 ---
-SAS程序猿/媛有时候会碰到去除字符串中重复值的问题，用常用的字符函数如SCAN，SUBSTR可能会很费劲，用正则表达式来处理就简单了。示例程序如下：
+SAS程序猿/媛有时候会碰到去除字符串中重复值的问题，用常用的字符函数如SCAN，SUBSTR可能会很费劲，用<a href="https://zh.wikipedia.org/zh/正则表达式" target="_blank"><span style="text-decoration: none;">正则表达式</span></a>来处理就简单了。示例程序如下：
 <pre><code>data _null_;
     infile cards truncover;
     input STRING $32767.;

@@ -26,4 +26,4 @@ categories: [程序人生]
     end;
 run;
 </code></pre>
-简单说下上面方法的思路，我们知道一个具有n个元素的集合的子集个数是2的n次方，因为每个元素只有出现不出现两种情况。首先将数组元素转换成二进制值，‘abcde’对应的值为‘00011111’，各元素对应的值分别为：2的4次方16，2的3次方8，2的2次方4，2的1次方2，2的0次方1。然后用函数<a href="http://support.sas.com/documentation/cdl/en/lrdict/64316/HTML/default/viewer.htm#a000245865.htm" target="_blank"><span style="text-decoration: none;">BAND</span></a>将数字0-31（0代表空集）分别和各元素做位运算，返回结果为真则将元素值赋值给新的数组，最后将新数组连接起来即为子集。
+简单说下上面方法的思路，我们知道一个具有n个元素的集合的子集个数是2的n次方，因为每个元素只有出现和不出现两种情况。首先将数组元素转换成二进制值，‘abcde’对应的值为‘00011111’，各元素对应的值分别为：2的4次方16，2的3次方8，2的2次方4，2的1次方2，2的0次方1。然后用函数<a href="http://support.sas.com/documentation/cdl/en/lrdict/64316/HTML/default/viewer.htm#a000245865.htm" target="_blank"><span style="text-decoration: none;">BAND</span></a>将数字0-31（0代表空集）分别和各元素做位运算，返回结果为真则将元素值赋值给新的数组，最后将新数组连接起来即为子集。

@@ -55,7 +55,7 @@ data want;
     if last then call execute('run;');
 run;
 </code></pre></li></ol>
-可能大家会觉得上面两种方法代码行数都有点多，那请看下面采用矩阵重组的方法：
+可能大家会觉得上面两种方法代码行数都有点多，那请看下面采用<a href="https://support.sas.com/documentation/cdl/en/imlug/66845/PDF/default/imlug.pdf" target="_blank"><span style="text-decoration: none;">SAS/IML</span></a>的方法：
 <pre><code>proc iml;
     use have;
     read all var _NUM_ into M1[c=VARNAMES];
