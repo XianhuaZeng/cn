@@ -4,7 +4,7 @@ title: SAS统计一篇文章中各字母的出现频率
 date: 2018-02-17 10:01
 author: 曾宪华
 comments: no
-tags: [PROC FREQ, 正则表达式, CALL PRXNEXT, PRXCHANGE]
+tags: [PROC FREQ, 正则表达式, CALL PRXNEXT, PRXCHANGE, COUNTC]
 categories: [程序人生]
 ---
 今天偶然看到一个古老的<a href="http://bbs.pinggu.org/thread-1570329-1-1.html" target="_blank"><span style="text-decoration: none;">帖子</span></a>：统计一篇文章中各字母的出现的次数和频率。先说统计单词的问题。最直接的方法应该是将文章按单词分成多行，每行一个单词，再用<a href="https://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm#statug_freq_sect006.htm" target="_blank"><span style="text-decoration: none;">PROC FREQ</span></a>即可求得频数和频率。程序如下：

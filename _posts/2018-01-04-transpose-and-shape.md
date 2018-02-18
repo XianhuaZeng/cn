@@ -4,7 +4,7 @@ title: SAS矩阵重组
 date: 2018-01-04 22:02
 author: 曾宪华
 comments: no
-tags: [FILENAME, CALL EXECUTE, PRXCHANGE, IML]
+tags: [FILENAME, CALL EXECUTE, PRXCHANGE, SAS/IML, SHAPE]
 categories: [程序人生]
 ---
 <p><a href="http://www.xianhuazeng.com/cn/images/2018/01/Shape.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/images/2018/01/Shape.jpg" alt="Shape" /></a></p>
