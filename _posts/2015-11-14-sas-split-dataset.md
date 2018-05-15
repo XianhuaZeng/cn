@@ -36,7 +36,7 @@ data %inc code;;
     set sashelp.class;
 run;
 </code></pre></li><li><a href="http://support.sas.com/documentation/cdl/en/lrcon/65287/HTML/default/viewer.htm#n1b4cbtmb049xtn1vh9x4waiioz4.htm" target="_blank"><span style="text-decoration: none;">HASH</span></a>，程序（SAS9.2+）如下：<pre><code>proc sort data=sashelp.class out=class;
-	by SEX;
+    by SEX;
 run;
 
 data _null_;
