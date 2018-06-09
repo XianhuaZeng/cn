@@ -59,7 +59,7 @@ data _null_;
     set datadef;
     call execute('%nrstr(%relngth(slib=&amp;slib, mem='||cats(MEMNAME)||'))');
 run;
-</code></pre><p>当然还可以使用<span style="text-decoration: none;"><a href="http://support.sas.com/documentation/cdl/en/proc/61895/HTML/default/viewer.htm#a000085768.htm" target="_blank">PROC CONTENTS</a></span>或者<a href="http://www.xianhuazeng.com/cn?p=710" target="_blank"><span style="text-decoration: none;">博文</span></a>有介绍SAS中用<span style="text-decoration: none;"><a href="http://support.sas.com/documentation/cdl/en/hostunx/61879/HTML/default/viewer.htm#pipe.htm" target="_blank">FILENAME</a></span>+PIPE方法来得到数据集DATADEF，程序如下：
+</code></pre><p>当然还可以使用<span style="text-decoration: none;"><a href="http://support.sas.com/documentation/cdl/en/proc/61895/HTML/default/viewer.htm#a000085768.htm" target="_blank">PROC CONTENTS</a></span>或者<span style="text-decoration: none;"><a href="http://support.sas.com/documentation/cdl/en/hostunx/61879/HTML/default/viewer.htm#pipe.htm" target="_blank">FILENAME</a></span>+PIPE方法来得到数据集DATADEF，程序如下：
 </p><pre><code>/*PROC CONTENTS*/
 ods output members=datadef;
 
