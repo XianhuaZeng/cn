@@ -78,9 +78,11 @@ filename raw pipe "ls &amp;_meta.*.sas7bdat | sed 's/.*\/\(.*\)\.sas7bdat/\1/'";
 data datadef;
     infile raw;
     input;
-    length DSN $200;
-    DSN=upcase(cats(_INFILE_));
+    length DATASET $8;
+    DATASET=upcase(cats(_INFILE_));
 run;
+
+filename raw clear;
 </code></pre><p>
 不过还是直接使用METADATA中的DATADEF这个数据集最方便了，程序如下：</p><pre><code>/*SDTM数据集所在的逻辑库名字*/
 %let slib=TRANSFER;
