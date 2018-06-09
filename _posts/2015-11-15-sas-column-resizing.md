@@ -75,7 +75,7 @@ run;
 filename raw pipe "ls &amp;_meta.*.sas7bdat | sed 's/.*\/\(.*\)\.sas7bdat/\1/'"; 
 /*结果为单行的命令："echo `ls &amp;_meta.*.sas7bdat | sed 's/.*\/\(.*\)\.sas7bdat/\1/'`"*/
 
-data dlist;
+data datadef;
     infile raw;
     input;
     length DSN $200;
