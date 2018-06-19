@@ -4,7 +4,7 @@ title: SAS宏程序中的查询
 date: 2015-05-27 20:49
 author: 曾宪华
 comments: true
-tags: [Macro, PIPE, 宏]
+tags: [Macro, FILENAME PIPE, 宏]
 categories: [程序人生]
 ---
 <p>我们在写相对复杂的宏的时候，通常会在开始位置加一些判断，比如判断某个变量是否在、一个路径是否存在、一个路径下面某种文件是否存在。。。</p>
@@ -44,7 +44,7 @@ categories: [程序人生]
 <pre><code>%if %sysfunc(fileexist(%nrbquote(&amp;dir))) %then ...;
 </code></pre>
 </li>
-	<li>判断一个路径下面某种文件(txt)是否存在的Code如下：
+	<li>判断一个路径下面某种文件(txt)是否存在可以用<span style="text-decoration: none;"><a href="http://support.sas.com/documentation/cdl/en/hostunx/61879/HTML/default/viewer.htm#pipe.htm" target="_blank">FILENAME PIPE</a></span>，程序如下：
 
 <pre><code>%let fexist=1;
 
