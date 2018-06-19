@@ -27,7 +27,7 @@ for i in range(1,len(table.rows)): # 限定从表格第二行开始循环读取�
         print(table.rows[i].cells[j].text)</code></pre>
 当然你也可以通过直接打开文档查看来获取位置，比如上图中的第一行第二列的单元格的坐标就是（1，1）。代码执行结果如下图：
 <p><a href="http://www.xianhuazeng.com/cn/images/2018/06/Position.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/images/2018/06/Position.jpg" alt="Position" /></a></p>
-然后赋值给所获取位置的右边一列。以下代码有一个前提：即各个时间戳已经被获取并保存在一个TXT文件中（可以通过<span style="text-decoration: none;"><a href="http://support.sas.com/documentation/cdl/en/hostunx/61879/HTML/default/viewer.htm#pipe.htm" target="_blank">FILENAME PIPE</a></span>获取最新时间戳），如下图：
+然后赋值给所获取位置的右边一列。以下代码有一个前提：即各个时间戳已经被获取并保存在一个TXT文件中（可以通过<span style="text-decoration: none;"><a href="http://support.sas.com/documentation/cdl/en/hostunx/61879/HTML/default/viewer.htm#pipe.htm" target="_blank">FILENAME PIPE</a></span>获取最新时间戳，例子在<span style="text-decoration: none;"><a href="http://www.xianhuazeng.com/cn/2016/03/12/get-modified-time/" target="_blank">这里</a></span>），如下图：
 <p><a href="http://www.xianhuazeng.com/cn/images/2018/06/Time.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/images/2018/06/Time.jpg" alt="Time" /></a></p>
 更新时间戳的代码如下：
 <pre><code># coding=utf-8
@@ -89,4 +89,7 @@ for i in range(1, len(table.rows)):
     # 居中单元格
     table.rows[i].cells[2].paragraphs[0].alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
 
-chklist.save('C:\\Users\\Xianhua\\Documents\\Python\\Checklist '+ datetime.now().date().strftime('%Y%m%d')+'.docx')</code></pre>
+chklist.save('C:\\Users\\Xianhua\\Documents\\Python\\Checklist '+ datetime.now().date().strftime('%Y%m%d')+'.docx')
+</code></pre>
+更新后的文件截图如下：
+<p><a href="http://www.xianhuazeng.com/cn/images/2018/06/Checklist 20180618.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/images/2018/06/Checklist 20180618.jpg" alt="Checklist 20180618" /></a></p>

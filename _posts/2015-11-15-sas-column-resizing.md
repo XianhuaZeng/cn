@@ -4,7 +4,7 @@ title: 批量改变SAS数据集字符型变量的长度
 date: 2015-11-15 11:22
 author: 曾宪华
 comments: true
-tags: [CDISC, Column Resizing, DICTIONARY Tables, SASHELP Views]
+tags: [CDISC, Column Resizing, DICTIONARY Tables, SASHELP Views, FILENAME PIPE]
 categories: [程序人生]
 ---
 <p>临床试验的SAS程序猿/媛都知道，<span style="text-decoration: none;"><a href="http://www.fda.gov/downloads/ForIndustry/DataStandards/StudyDataStandards/UCM312964.pdf" target="_blank">FDA</a></span>对所提交的数据集的大小是有限定的，因为数据集过大在操作时会有点麻烦（比如打开会很慢），所以当我们生成最终的数据集时就要进行一个操作：按照字符型变量值的最大长度来重新定义变量的长度，以删除多余的空格从而减少数据集的大小。下面贴上我去年写的实现这一目的的宏程序：</p><pre><code>%macro relngth(slib=, mem=);
@@ -59,7 +59,7 @@ data _null_;
     set datadef;
     call execute('%nrstr(%relngth(slib=&amp;slib, mem='||cats(MEMNAME)||'))');
 run;
-</code></pre><p>当然还可以使用<span style="text-decoration: none;"><a href="http://support.sas.com/documentation/cdl/en/proc/61895/HTML/default/viewer.htm#a000085768.htm" target="_blank">PROC CONTENTS</a></span>或者<span style="text-decoration: none;"><a href="http://support.sas.com/documentation/cdl/en/hostunx/61879/HTML/default/viewer.htm#pipe.htm" target="_blank">FILENAME</a></span>+PIPE方法来得到数据集DATADEF，程序如下：
+</code></pre><p>当然还可以使用<span style="text-decoration: none;"><a href="http://support.sas.com/documentation/cdl/en/proc/61895/HTML/default/viewer.htm#a000085768.htm" target="_blank">PROC CONTENTS</a></span>或者<span style="text-decoration: none;"><a href="http://support.sas.com/documentation/cdl/en/hostunx/61879/HTML/default/viewer.htm#pipe.htm" target="_blank">FILENAME PIPE</a></span>方法来得到数据集DATADEF，程序如下：
 </p><pre><code>/*PROC CONTENTS*/
 ods output members=datadef;
 
@@ -71,7 +71,7 @@ proc contents data=&amp;mlib..cd out=varlist;
 run;
 */
 
-/*FILENAME+PIPE*/
+/*FILENAME PIPE*/
 filename raw pipe "ls &amp;_meta.*.sas7bdat | sed 's/.*\/\(.*\)\.sas7bdat/\1/'"; 
 /*结果为单行的命令："echo `ls &amp;_meta.*.sas7bdat | sed 's/.*\/\(.*\)\.sas7bdat/\1/'`"*/
 
