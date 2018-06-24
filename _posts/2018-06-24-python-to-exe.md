@@ -17,6 +17,6 @@ categories: [程序人生]
 <p><a href="http://www.xianhuazeng.com/cn/images/2018/06/Pyinstaller04.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/images/2018/06/Pyinstaller04.jpg" alt="Pyinstaller04" /></a></p>
 根据官网的说明，exe文件会保存在dist文件夹中（见下图），所以我们只需要带着这一个文件夹，就可以在没有Python环境的机器上执行Python脚本了。
 <p><a href="http://www.xianhuazeng.com/cn/images/2018/06/Pyinstaller05.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/images/2018/06/Pyinstaller05.jpg" alt="Pyinstaller05" /></a></p>
-大家可能会觉得整个文件夹看起来不够简洁，我们可不可以只带着一个exe文件呢？当然是可以的，只需要在转换的时候加上选项<span style="text-decoration: none;"><a href="https://pyinstaller.readthedocs.io/en/v3.3.1/usage.html#what-to-generate" target="_blank">-F</a></span>就可以实现只生成一个exe文件，转换成功的文件夹截图如下：
+大家可能会觉得整个文件夹看起来不够简洁，我们可不可以只带着一个exe文件呢？当然是可以的，只需要在转换的时候加上选项<span style="text-decoration: none;"><a href="https://pyinstaller.readthedocs.io/en/v3.3.1/usage.html#what-to-generate" target="_blank">-F</a></span>就可以实现只生成一个exe文件，截图如下：
 <p><a href="http://www.xianhuazeng.com/cn/images/2018/06/Pyinstaller06.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/images/2018/06/Pyinstaller06.jpg" alt="Pyinstaller06" /></a></p>
 我们可以看到上面两种方法所生成的exe文件大小有很大差别（第一个是1.52MB，第二个6.99MB），但是经过测试，发现两种方法exe文件启动时间并没有明显的差别，可能是因为我的这个脚本简单。但是对于一个复杂的Python脚本，加选项-F转换后的exe文件肯定会比不加选项生成的exe文件要大很多，启动也会慢很多，故建议在转换一个复杂的Python脚本时不要加选项-F以提高exe启动速度。
