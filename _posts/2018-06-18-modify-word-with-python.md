@@ -44,8 +44,9 @@ timestamp = open('C:\\Users\\Xianhua\\Documents\\Python\\Checklist.txt', 'r')
 mydic = dict() 
 
 for line in timestamp:
-    line = re.split('(\w+?)\s+(.+)', line)
-    mydic[line[1]] = line[2]
+    matchObj = re.match( r'(\w+?)\s+(.+)', line)
+    if matchObj:
+        mydic[matchObj.group(1).rstrip()] = matchObj.group(2)
     
 timestamp.close()
 
@@ -60,7 +61,7 @@ for i in range(1, len(table.rows)): # 限定从表格第二行开始循环读取
 
 table = chklist.tables[2] # 第三个表格
 
-for i in range(1, len(table.rows)):
+for i in range(1, 6):
     # Raw data
     if i == 1:
         table.rows[i].cells[2].text = mydic['raw']
