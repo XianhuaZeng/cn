@@ -30,8 +30,8 @@ run;
 </code></pre></li>
 <li><a href="http://support.sas.com/documentation/cdl/en/lrcon/65287/HTML/default/viewer.htm#n1b4cbtmb049xtn1vh9x4waiioz4.htm" target="_blank"><span style="text-decoration: none;">HASH</span></a>：
 <pre><code>data lead;
+	retain X;
     if _N_=1 then do;
-		retain X;
         dcl hash h(ordered: 'a') ;
         h.definekey('LEAD_SEQ');
         h.definedata('LEAD_SEQ', 'LEAD');
@@ -39,10 +39,10 @@ run;
         dcl hiter hi('h');
 
 		do  until(eof);
-            set demo(rename=X=LEAD) end=eof;		 
-			LEAD_SEQ+1;
-	     	h.add();
-	  	end;
+            set demo(rename=X=LEAD) end=eof;
+	    	LEAD_SEQ+1;
+	    	h.add();
+		end;
 	end;
 	set demo;
     LAG=lag(X);
