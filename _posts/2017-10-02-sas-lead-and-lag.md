@@ -30,21 +30,26 @@ run;
 </code></pre></li>
 <li><a href="http://support.sas.com/documentation/cdl/en/lrcon/65287/HTML/default/viewer.htm#n1b4cbtmb049xtn1vh9x4waiioz4.htm" target="_blank"><span style="text-decoration: none;">HASH</span></a>：
 <pre><code>data lead;
-    length X LAG LEAD 8.;
-    if _n_=1 then do;
-    if 0 then set demo(rename=X=LEAD);
-        dcl hash h(dataset: 'demo(rename=X=LEAD)', ordered: 'a') ;
-        h.definekey('LEAD');
-        h.definedata('LEAD');
+    if _N_=1 then do;
+		retain X;
+        dcl hash h(ordered: 'a') ;
+        h.definekey('LEAD_SEQ');
+        h.definedata('LEAD_SEQ', 'LEAD');
         h.definedone();
         dcl hiter hi('h');
-    end;
-    set demo;
+
+		do  until(eof);
+            set demo(rename=X=LEAD) end=eof;		 
+			LEAD_SEQ+1;
+	     	h.add();
+	  	end;
+	end;
+	set demo;
     LAG=lag(X);
-    hi.setcur(key: X); /*Specifies a starting key item for iteration*/
+    hi.setcur(key: _N_); /*Specifies a starting key item for iteration*/
     rc=hi.next();
     if rc^=0 then LEAD=.;
-    keep X LAG LEAD;
+	drop LEAD_SEQ RC;
 run;
 </code></pre></li></ol>
 <p>上面第一种方法程序行数虽然少，但是有两次SET的操作，所以当数据集较大时建议采用第二种方法以提高效率。</p>
