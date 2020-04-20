@@ -37,9 +37,9 @@ run;
         h.definedata('LEAD_SEQ', 'LEAD');
         h.definedone();
         dcl hiter hi('h');
-
+		
 		do  until(eof);
-            set demo(rename=X=LEAD) end=eof;
+        	set demo(rename=X=LEAD) end=eof;
 	    	LEAD_SEQ+1;
 	    	h.add();
 		end;
