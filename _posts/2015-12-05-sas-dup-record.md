@@ -25,6 +25,7 @@ run;
         h.definedone();
     end;
     h.output(dataset: 'uni');
+    stop;
 run;</code></pre>
 </li>
 </ol>
