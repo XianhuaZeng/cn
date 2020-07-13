@@ -20,4 +20,4 @@ categories: [程序人生]
 大家可能会觉得整个文件夹看起来不够简洁，我们可不可以只带着一个exe文件呢？当然是可以的，只需要在转换的时候加上选项<span style="text-decoration: none;"><a href="https://pyinstaller.readthedocs.io/en/v3.3.1/usage.html#what-to-generate" target="_blank">-F</a></span>就可以实现只生成一个exe文件，截图如下：
 <p><a href="http://www.xianhuazeng.com/cn/images/2018/06/Pyinstaller06.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/cn/images/2018/06/Pyinstaller06.jpg" alt="Pyinstaller06" /></a></p>
 我们可以看到上面两种方法所生成的exe文件大小有很大差别（第一个是1.52MB，第二个6.99MB），但是经过测试，发现两种方法exe文件启动时间并没有明显的差别，可能是因为我的这个脚本简单。但是对于一个复杂的Python脚本，加选项-F转换后的exe文件肯定会比不加选项生成的exe文件大很多，启动也会慢很多，故建议在转换一个复杂的Python脚本时不要加选项-F以提高exe启动速度。
-我的博客即将同步至腾讯云+社区，邀请大家一同入驻：https://cloud.tencent.com/developer/support-plan?invite_code=17pibou8wgo3v
+<p>我的博客即将同步至腾讯云+社区，邀请大家一同入驻： <span style="text-decoration: none;"><a href="https://cloud.tencent.com/developer/support-plan?invite_code=17pibou8wgo3v" target="_blank">https://cloud.tencent.com/developer/support-plan?invite_code=17pibou8wgo3v</a></span></p>
